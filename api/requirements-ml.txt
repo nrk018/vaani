@@ -1,0 +1,3 @@
+# Optional: real multilingual embeddings + MSMARCO-XI streaming
+sentence-transformers>=3.3.0
+datasets>=3.0.0

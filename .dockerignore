@@ -1,0 +1,7 @@
+.venv
+web/node_modules
+web/.next
+**/.git
+eval/.cache
+ingest/cache
+data/raw

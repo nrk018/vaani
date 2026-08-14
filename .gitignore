@@ -1,0 +1,38 @@
+# deps
+node_modules/
+web/node_modules/
+web/.next/
+web/out/
+
+# python
+api/.venv/
+api/__pycache__/
+**/__pycache__/
+**/*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# env
+.env
+.env.local
+web/.env.local
+api/.env
+
+# indexes and data dumps
+data/raw/
+ingest/cache/
+
+# nested create-next-app git (monorepo root is canonical)
+web/.git/
+
+# os / ide
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# eval artifacts (keep golden, ignore local runs)
+eval/results.local.json
+eval/.cache/

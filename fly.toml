@@ -1,0 +1,28 @@
+app = "vaani-api"
+primary_region = "sin"
+
+[build]
+  dockerfile = "api/Dockerfile"
+
+[env]
+  PORT = "8000"
+  INDEX_DIR = "/app/data/index"
+  CORS_ORIGINS = "http://localhost:3000"
+  VAANI_HASH_EMBEDDINGS = "1"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.concurrency]
+    type = "requests"
+    hard_limit = 50
+    soft_limit = 25
+
+[[vm]]
+  memory = "2gb"
+  cpu_kind = "shared"
+  cpus = 2
