@@ -1,0 +1,21 @@
+{
+  "n_passages": 41,
+  "n_chunks": 267,
+  "dim": 384,
+  "strategies": [
+    "native",
+    "parent_child",
+    "proposition",
+    "semantic"
+  ],
+  "langs": [
+    "en",
+    "hi",
+    "mr"
+  ],
+  "sources": [
+    "goa",
+    "seed"
+  ],
+  "embedder": "intfloat/multilingual-e5-small"
+}
