@@ -1,7 +1,9 @@
 import type { AskResult, Health, MetricsSnapshot } from "./types";
 
 export const API =
-  process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") || "http://localhost:8000";
+  typeof window === "undefined"
+    ? process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") || "http://localhost:8000"
+    : "/backend";
 
 async function parseSseAsk(
   query: string,

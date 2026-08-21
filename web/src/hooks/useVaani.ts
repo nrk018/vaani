@@ -194,7 +194,12 @@ export function useVaani() {
           setState("idle");
         }
       } catch (err) {
-        setError(err instanceof Error ? err.message : "ask failed");
+        const msg = err instanceof Error ? err.message : "ask failed";
+        setError(
+          /failed to fetch|networkerror|network error|load failed/i.test(msg)
+            ? "Could not reach the API. Keep make api running, then ask again."
+            : msg,
+        );
         setState("idle");
       }
     },
