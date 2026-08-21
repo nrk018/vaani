@@ -27,8 +27,8 @@ export function VoiceStage() {
   const latest = [...v.turns].reverse().find((t) => t.role === "vaani");
   const caption =
     v.partial ||
-    latest?.text ||
-    (v.state === "thinking" ? "Retrieving evidence…" : "");
+    (v.state === "speaking" ? v.spokenLine : "") ||
+    (v.state === "idle" ? v.spokenLine || latest?.text || "" : "");
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -122,27 +122,19 @@ export function VoiceStage() {
       <div className="fixed inset-x-0 bottom-0 z-30">
         <div className="mx-auto flex w-full max-w-2xl flex-col items-center px-4 pb-2 pt-2">
           <div className="mb-2 flex min-h-[4.75rem] w-full items-end justify-center">
-            <AnimatePresence mode="wait">
-              {caption ? (
-                <motion.p
-                  key={latest?.id ?? (v.partial ? "partial" : v.state)}
-                  initial={{ opacity: 0, y: 14 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 8 }}
-                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                  className="line-clamp-3 max-w-xl text-center font-serif text-xl leading-snug text-white/90 md:text-2xl"
-                >
-                  {caption}
-                </motion.p>
-              ) : (
-                <motion.span
-                  key="empty"
-                  className="block h-[4.75rem]"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 0 }}
-                />
-              )}
-            </AnimatePresence>
+            {caption ? (
+              <p className="line-clamp-3 max-w-xl text-center font-serif text-xl leading-snug text-white/90 md:text-2xl">
+                {caption}
+                {v.state === "speaking" ? (
+                  <span
+                    aria-hidden
+                    className="ml-0.5 inline-block h-[0.85em] w-[2px] translate-y-[0.08em] bg-gold align-baseline"
+                  />
+                ) : null}
+              </p>
+            ) : (
+              <span className="block h-[4.75rem]" />
+            )}
           </div>
 
           <form
