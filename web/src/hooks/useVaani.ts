@@ -18,6 +18,7 @@ export function useVaani() {
   const [error, setError] = useState<string | null>(null);
   const [lastResult, setLastResult] = useState<AskResult | null>(null);
   const [draft, setDraft] = useState("");
+  const [spokenLine, setSpokenLine] = useState("");
   const rafRef = useRef<number>(0);
   const scribeRef = useRef<{ close: () => void; commit: () => void } | null>(
     null,
@@ -60,7 +61,7 @@ export function useVaani() {
   }, []);
 
   const playBuffer = useCallback(
-    async (pcm: ArrayBuffer) => {
+    async (pcm: ArrayBuffer, text: string) => {
       const ctx = await unlockAudio();
       if (!ctx) throw new Error("no audio context");
       const decoded = await ctx.decodeAudioData(pcm.slice(0));
@@ -72,27 +73,37 @@ export function useVaani() {
       analyser.connect(ctx.destination);
       sourceRef.current = src;
       const data = new Uint8Array(analyser.frequencyBinCount);
-      const loop = () => {
-        analyser.getByteTimeDomainData(data);
-        let sum = 0;
-        for (let i = 0; i < data.length; i++) {
-          const v = (data[i] - 128) / 128;
-          sum += v * v;
-        }
-        const rms = Math.sqrt(sum / data.length);
-        setEnergy(0.18 + Math.min(0.82, rms * 4));
-        rafRef.current = requestAnimationFrame(loop);
-      };
-      loop();
+      const duration = Math.max(0.35, decoded.duration);
       await new Promise<void>((resolve, reject) => {
+        let started = 0;
+        const loop = () => {
+          analyser.getByteTimeDomainData(data);
+          let sum = 0;
+          for (let i = 0; i < data.length; i++) {
+            const v = (data[i] - 128) / 128;
+            sum += v * v;
+          }
+          const rms = Math.sqrt(sum / data.length);
+          setEnergy(0.22 + Math.min(0.78, rms * 6));
+          const elapsed = ctx.currentTime - started;
+          const n = Math.min(
+            text.length,
+            Math.max(1, Math.ceil((elapsed / duration) * text.length)),
+          );
+          setSpokenLine(text.slice(0, n));
+          rafRef.current = requestAnimationFrame(loop);
+        };
         src.onended = () => {
           if (rafRef.current) cancelAnimationFrame(rafRef.current);
           sourceRef.current = null;
+          setSpokenLine(text);
           setEnergy(0.12);
           resolve();
         };
         try {
           src.start();
+          started = ctx.currentTime;
+          loop();
         } catch (err) {
           reject(err);
         }
@@ -104,9 +115,10 @@ export function useVaani() {
   const speakAnswer = useCallback(
     async (text: string) => {
       setState("speaking");
+      setSpokenLine("");
       try {
         const pcm = await speak(text);
-        await playBuffer(pcm);
+        await playBuffer(pcm, text);
         setState("idle");
         return;
       } catch {
@@ -116,14 +128,35 @@ export function useVaani() {
         await new Promise<void>((resolve) => {
           const utter = new SpeechSynthesisUtterance(text);
           utter.rate = 1.02;
-          utter.onend = () => resolve();
-          utter.onerror = () => resolve();
+          let i = 0;
+          const tick = window.setInterval(() => {
+            i = Math.min(text.length, i + 1);
+            setSpokenLine(text.slice(0, i));
+            setEnergy(0.28 + Math.random() * 0.55);
+            if (i >= text.length) window.clearInterval(tick);
+          }, 70);
+          utter.onboundary = (ev) => {
+            if (typeof ev.charIndex === "number") {
+              setSpokenLine(text.slice(0, ev.charIndex + (ev.charLength || 1)));
+            }
+          };
+          utter.onend = () => {
+            window.clearInterval(tick);
+            setSpokenLine(text);
+            resolve();
+          };
+          utter.onerror = () => {
+            window.clearInterval(tick);
+            setSpokenLine(text);
+            resolve();
+          };
           window.speechSynthesis.speak(utter);
         });
         setState("idle");
         setEnergy(0.12);
         return;
       }
+      setSpokenLine(text);
       setError("Could not play spoken audio. Check the ElevenLabs key and speaker.");
       setState("idle");
     },
@@ -139,6 +172,7 @@ export function useVaani() {
       setError(null);
       setPartial("");
       setDraft("");
+      setSpokenLine("");
       const userTurn: Turn = {
         id: crypto.randomUUID(),
         role: "user",
@@ -306,6 +340,7 @@ export function useVaani() {
     health,
     error,
     lastResult,
+    spokenLine,
     draft,
     setDraft,
     startListening,

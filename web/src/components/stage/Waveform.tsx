@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 const INLINE_BARS = 32;
 const DOCK_BARS = 96;
 
@@ -24,6 +26,18 @@ export function Waveform({
 }) {
   const idle = variant === "dock" ? DOCK_IDLE : INLINE_IDLE;
   const maxH = variant === "dock" ? 52 : 40;
+  const [phase, setPhase] = useState(0);
+
+  useEffect(() => {
+    if (!active) return;
+    let id = 0;
+    const loop = (now: number) => {
+      setPhase(now / 160);
+      id = requestAnimationFrame(loop);
+    };
+    id = requestAnimationFrame(loop);
+    return () => cancelAnimationFrame(id);
+  }, [active]);
 
   return (
     <div
@@ -35,13 +49,15 @@ export function Waveform({
       aria-hidden
     >
       {idle.map((base, i) => {
-        const wave = Math.sin(i * 0.31) * 0.5 + 0.5;
-        const live = 10 + (wave * 26 + energy * 28) * (0.35 + (i % 7) / 10);
+        const pulse =
+          (Math.sin(i * 0.31 + phase) * 0.5 + 0.5) * 0.65 +
+          (Math.sin(i * 0.17 - phase * 1.35) * 0.5 + 0.5) * 0.35;
+        const live = 6 + pulse * (18 + energy * 38) * (0.45 + (i % 7) / 12);
         const h = active ? Math.min(maxH, Math.round(live)) : base;
         return (
           <span
             key={i}
-            className={`rounded-t-full bg-gradient-to-t from-[#0B6839]/50 to-[#FEE101] transition-[height,opacity] duration-150 ${
+            className={`rounded-t-full bg-gradient-to-t from-[#0B6839]/50 to-[#FEE101] ${
               variant === "dock" ? "min-w-0 flex-1" : "w-[3px]"
             } ${active ? "opacity-100" : "opacity-40"}`}
             style={{ height: `${h}px` }}
