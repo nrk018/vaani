@@ -32,6 +32,17 @@ class IndexStore:
         else:
             self._build(path)
         self.warm = True
+        self.warm_retriever()
+
+    def warm_retriever(self) -> None:
+        """Prime torch / FAISS so the first user query is not a cold load."""
+        try:
+            for q in ("What is the capital of Goa?", "वाणी क्या है?", "Panaji"):
+                vec = self.embedder.encode_query(q)
+            if self.faiss_index is not None and vec is not None:
+                self.faiss_index.search(vec.astype(np.float32), min(8, max(1, len(self.chunks))))
+        except Exception:
+            pass
 
     def _load(self, path: Path) -> None:
         self.vectors = np.load(path / "dense.npy").astype(np.float32)

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-14T14:55:11Z",
+  "generated_at": "2026-08-21T07:13:51Z",
   "n": 100,
-  "under_200ms": 7,
-  "under_200ms_pct": 7.0,
-  "elapsed_s": 994.25,
+  "under_200ms": 100,
+  "under_200ms_pct": 100.0,
+  "elapsed_s": 0.99,
   "index": {
     "n_chunks": 267,
     "dim": 384,
@@ -30,123 +30,123 @@
   "latency": {
     "rag": {
       "n": 100,
-      "p50": 10615.79,
-      "p70": 11665.93,
-      "p100": 16686.83,
-      "mean": 9942.17
+      "p50": 9.79,
+      "p70": 10.19,
+      "p100": 20.45,
+      "mean": 9.87
     },
     "ttft": {
       "n": 100,
-      "p50": 10554.61,
-      "p70": 11566.28,
-      "p100": 16616.08,
-      "mean": 9864.91
+      "p50": 0.02,
+      "p70": 0.03,
+      "p100": 20.45,
+      "mean": 0.62
     },
     "nodes": {
       "inbound_guard": {
         "n": 100,
-        "p50": 0.02,
-        "p70": 0.02,
-        "p100": 0.08,
-        "mean": 0.02
+        "p50": 0.01,
+        "p70": 0.01,
+        "p100": 0.01,
+        "mean": 0.01
       },
       "embed": {
         "n": 97,
-        "p50": 24.49,
-        "p70": 27.54,
-        "p100": 707.28,
-        "mean": 44.04
+        "p50": 8.98,
+        "p70": 9.31,
+        "p100": 10.93,
+        "mean": 9.06
       },
       "dense": {
         "n": 97,
-        "p50": 0.46,
-        "p70": 0.56,
-        "p100": 6.74,
-        "mean": 0.71
+        "p50": 0.23,
+        "p70": 0.25,
+        "p100": 0.53,
+        "mean": 0.24
       },
       "bm25": {
         "n": 97,
-        "p50": 0.36,
-        "p70": 0.43,
-        "p100": 3.06,
-        "mean": 0.46
+        "p50": 0.2,
+        "p70": 0.21,
+        "p100": 0.41,
+        "mean": 0.2
       },
       "fuse": {
         "n": 97,
-        "p50": 0.19,
-        "p70": 0.2,
-        "p100": 0.82,
-        "mean": 0.2
+        "p50": 0.09,
+        "p70": 0.09,
+        "p100": 0.16,
+        "mean": 0.09
       },
       "retrieve": {
         "n": 97,
-        "p50": 1.0,
-        "p70": 1.21,
-        "p100": 10.62,
-        "mean": 1.37
+        "p50": 0.51,
+        "p70": 0.55,
+        "p100": 1.06,
+        "mean": 0.53
       },
       "ground": {
         "n": 97,
-        "p50": 0.21,
+        "p50": 0.2,
         "p70": 0.25,
-        "p100": 0.57,
-        "mean": 0.23
+        "p100": 0.38,
+        "mean": 0.21
       },
       "generate_ttft": {
-        "n": 93,
-        "p50": 10588.82,
-        "p70": 11711.48,
-        "p100": 16616.08,
-        "mean": 10605.7
+        "n": 94,
+        "p50": 0.02,
+        "p70": 0.03,
+        "p100": 0.04,
+        "mean": 0.02
       },
       "outbound_guard": {
-        "n": 93,
-        "p50": 0.68,
-        "p70": 0.83,
-        "p100": 1.37,
-        "mean": 0.69
+        "n": 94,
+        "p50": 0.18,
+        "p70": 0.21,
+        "p100": 0.32,
+        "mean": 0.18
       },
       "retry_embed": {
-        "n": 4,
-        "p50": 13.05,
-        "p70": 13.56,
-        "p100": 16.91,
-        "mean": 13.44
+        "n": 3,
+        "p50": 8.76,
+        "p70": 8.79,
+        "p100": 8.83,
+        "mean": 8.71
       },
       "retry_dense": {
-        "n": 4,
-        "p50": 0.38,
-        "p70": 0.43,
-        "p100": 0.52,
-        "mean": 0.4
+        "n": 3,
+        "p50": 0.29,
+        "p70": 0.41,
+        "p100": 0.58,
+        "mean": 0.37
       },
       "retry_bm25": {
-        "n": 4,
-        "p50": 0.32,
-        "p70": 0.36,
-        "p100": 0.44,
-        "mean": 0.34
+        "n": 3,
+        "p50": 0.24,
+        "p70": 0.35,
+        "p100": 0.51,
+        "mean": 0.32
       },
       "retry_fuse": {
-        "n": 4,
-        "p50": 0.12,
-        "p70": 0.13,
-        "p100": 0.15,
-        "mean": 0.12
+        "n": 3,
+        "p50": 0.09,
+        "p70": 0.1,
+        "p100": 0.12,
+        "mean": 0.1
       },
       "retry_retrieve": {
-        "n": 4,
-        "p50": 0.8,
-        "p70": 0.9,
-        "p100": 1.12,
-        "mean": 0.86
+        "n": 3,
+        "p50": 0.62,
+        "p70": 0.85,
+        "p100": 1.2,
+        "mean": 0.78
       }
     }
   },
   "verdicts": {
-    "GROUNDED": 93,
+    "GROUNDED": 94,
     "LOW_CONFIDENCE": 0,
-    "REFUSED": 7
+    "REFUSED": 6
   },
   "rows": [
     {
@@ -154,8 +154,8 @@
       "query": "What is Hacker House Goa?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 836.62,
-      "ttft_ms": 714.48,
+      "rag_ms": 9.15,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -164,18 +164,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Hacker House Goa is a builder residency and shortlisting program held in Goa, India.",
+      "answer": "Hacker House Goa (HH Goa) is a builder residency and shortlisting program held in Goa, India.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 38.48,
-        "dense": 3.65,
-        "bm25": 0.9,
-        "fuse": 0.19,
-        "retrieve": 4.74,
-        "ground": 0.2,
-        "generate_ttft": 714.48,
-        "outbound_guard": 0.86
+        "inbound_guard": 0.0,
+        "embed": 8.04,
+        "dense": 0.23,
+        "bm25": 0.23,
+        "fuse": 0.13,
+        "retrieve": 0.58,
+        "ground": 0.38,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.24
       }
     },
     {
@@ -183,8 +183,8 @@
       "query": "What is Task 2 in HH Goa 2026?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 553.7,
-      "ttft_ms": 477.32,
+      "rag_ms": 9.62,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -193,18 +193,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Task 2 in HH Goa 2026 is a voice-enabled Retrieval-Augmented Generation (RAG) system.",
+      "answer": "Vaani (वाणी) is a voice-grounded RAG studio built for Hacker House Goa 2026 Task 2.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 21.07,
-        "dense": 0.48,
-        "bm25": 0.37,
-        "fuse": 0.16,
-        "retrieve": 1.0,
-        "ground": 0.2,
-        "generate_ttft": 477.32,
-        "outbound_guard": 0.92
+        "inbound_guard": 0.01,
+        "embed": 8.63,
+        "dense": 0.23,
+        "bm25": 0.24,
+        "fuse": 0.09,
+        "retrieve": 0.57,
+        "ground": 0.27,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.25
       }
     },
     {
@@ -212,8 +212,8 @@
       "query": "What dataset is used for the RAG pipeline?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 526.82,
-      "ttft_ms": 435.96,
+      "rag_ms": 9.89,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -222,18 +222,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "The dataset used for the RAG pipeline is ai4bharat/MSMARCO-XI on Hugging Face — MS MARCO translated into Indic languages.",
+      "answer": "The dataset for the RAG pipeline is ai4bharat/MSMARCO-XI on Hugging Face — MS MARCO translated into Indic languages.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 26.12,
-        "dense": 0.46,
-        "bm25": 0.37,
-        "fuse": 0.2,
-        "retrieve": 1.03,
+        "inbound_guard": 0.01,
+        "embed": 8.98,
+        "dense": 0.26,
+        "bm25": 0.2,
+        "fuse": 0.09,
+        "retrieve": 0.55,
         "ground": 0.23,
-        "generate_ttft": 435.96,
-        "outbound_guard": 0.83
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.21
       }
     },
     {
@@ -241,8 +241,8 @@
       "query": "What does Vaani mean?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 729.94,
-      "ttft_ms": 564.12,
+      "rag_ms": 8.81,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -251,18 +251,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Vaani means \"voice\" or \"speech\" in Sanskrit and many Indic languages.",
+      "answer": "Speakers often understand Marathi; MSMARCO-XI does not include a Konkani split, so Vaani indexes Marathi as the nearest Indic neighbor and keeps a dedicated Goa knowledge pack for local facts and greetings.",
       "n_citations": 5,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 24.49,
-        "dense": 0.39,
-        "bm25": 0.29,
-        "fuse": 0.18,
-        "retrieve": 0.87,
-        "ground": 0.51,
-        "generate_ttft": 564.12,
-        "outbound_guard": 0.8
+        "inbound_guard": 0.0,
+        "embed": 7.94,
+        "dense": 0.2,
+        "bm25": 0.14,
+        "fuse": 0.08,
+        "retrieve": 0.41,
+        "ground": 0.25,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.24
       }
     },
     {
@@ -270,8 +270,8 @@
       "query": "What is the capital of Goa?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 11050.72,
-      "ttft_ms": 11004.85,
+      "rag_ms": 9.36,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -280,18 +280,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Panaji is the capital of Goa.",
+      "answer": "Panaji (also spelled Panjim) is the capital of Goa.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 20.82,
-        "dense": 0.64,
-        "bm25": 0.43,
-        "fuse": 0.34,
-        "retrieve": 1.42,
-        "ground": 0.21,
-        "generate_ttft": 11004.85,
-        "outbound_guard": 1.01
+        "inbound_guard": 0.0,
+        "embed": 8.6,
+        "dense": 0.2,
+        "bm25": 0.15,
+        "fuse": 0.09,
+        "retrieve": 0.44,
+        "ground": 0.19,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.17
       }
     },
     {
@@ -299,8 +299,8 @@
       "query": "What does Dev borem korum mean?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 11595.96,
-      "ttft_ms": 11539.83,
+      "rag_ms": 9.0,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -309,18 +309,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Dev borem korum means \"May God do good\" / a blessing hello.",
+      "answer": "A common Konkani greeting is \"Dev borem korum\" — \"May God do good\" / a blessing hello.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 28.3,
-        "dense": 0.5,
-        "bm25": 0.39,
-        "fuse": 0.19,
-        "retrieve": 1.09,
-        "ground": 0.21,
-        "generate_ttft": 11539.83,
-        "outbound_guard": 0.71
+        "inbound_guard": 0.01,
+        "embed": 8.19,
+        "dense": 0.25,
+        "bm25": 0.2,
+        "fuse": 0.09,
+        "retrieve": 0.55,
+        "ground": 0.19,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.17
       }
     },
     {
@@ -328,8 +328,8 @@
       "query": "What is the official language of Goa?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10591.55,
-      "ttft_ms": 10551.09,
+      "rag_ms": 9.34,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -338,18 +338,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "The official language of Goa is Konkani.",
+      "answer": "Konkani (कोंकणी / Konknni) is the official language of Goa.",
       "n_citations": 7,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 22.91,
-        "dense": 0.41,
-        "bm25": 0.32,
-        "fuse": 0.19,
-        "retrieve": 0.92,
-        "ground": 0.51,
-        "generate_ttft": 10551.09,
-        "outbound_guard": 0.94
+        "inbound_guard": 0.01,
+        "embed": 8.55,
+        "dense": 0.23,
+        "bm25": 0.17,
+        "fuse": 0.09,
+        "retrieve": 0.5,
+        "ground": 0.19,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.16
       }
     },
     {
@@ -357,8 +357,8 @@
       "query": "When did Goa become a state of India?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 8567.99,
-      "ttft_ms": 8515.84,
+      "rag_ms": 8.95,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -367,18 +367,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Goa became a full state of India in 1987.",
+      "answer": "Goa is India's smallest state by area and a former Portuguese colony on the western coast of the Indian peninsula.",
       "n_citations": 7,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 29.66,
-        "dense": 0.46,
-        "bm25": 0.36,
-        "fuse": 0.18,
-        "retrieve": 1.0,
-        "ground": 0.19,
-        "generate_ttft": 8515.84,
-        "outbound_guard": 0.58
+        "inbound_guard": 0.01,
+        "embed": 8.24,
+        "dense": 0.28,
+        "bm25": 0.21,
+        "fuse": 0.08,
+        "retrieve": 0.56,
+        "ground": 0.13,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.11
       }
     },
     {
@@ -386,8 +386,8 @@
       "query": "What was Operation Vijay?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10643.64,
-      "ttft_ms": 10584.27,
+      "rag_ms": 10.72,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -396,18 +396,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Operation Vijay was the 1961 Indian military action that ended Portuguese rule in Goa, Daman, and Diu.",
+      "answer": "Portuguese rule lasted from 1510 until 1961, when Goa was annexed by India through Operation Vijay.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 30.96,
-        "dense": 0.39,
-        "bm25": 0.29,
-        "fuse": 0.2,
-        "retrieve": 0.88,
-        "ground": 0.23,
-        "generate_ttft": 10584.27,
-        "outbound_guard": 0.72
+        "inbound_guard": 0.0,
+        "embed": 9.97,
+        "dense": 0.18,
+        "bm25": 0.18,
+        "fuse": 0.09,
+        "retrieve": 0.44,
+        "ground": 0.19,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.17
       }
     },
     {
@@ -415,8 +415,8 @@
       "query": "What is feni?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10663.0,
-      "ttft_ms": 10511.57,
+      "rag_ms": 9.29,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -428,15 +428,15 @@
       "answer": "Feni is a traditional Goan spirit distilled from cashew apple or coconut toddy.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 25.65,
-        "dense": 0.46,
-        "bm25": 0.33,
-        "fuse": 0.21,
-        "retrieve": 0.99,
-        "ground": 0.22,
-        "generate_ttft": 10511.57,
-        "outbound_guard": 0.71
+        "inbound_guard": 0.0,
+        "embed": 8.59,
+        "dense": 0.17,
+        "bm25": 0.11,
+        "fuse": 0.09,
+        "retrieve": 0.36,
+        "ground": 0.19,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.17
       }
     },
     {
@@ -444,8 +444,8 @@
       "query": "What is the capital of India?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 9568.37,
-      "ttft_ms": 9510.88,
+      "rag_ms": 8.48,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -454,18 +454,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "The capital of India is New Delhi.",
+      "answer": "New Delhi is the capital of India.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 21.78,
-        "dense": 0.4,
-        "bm25": 0.29,
-        "fuse": 0.19,
-        "retrieve": 0.88,
-        "ground": 0.21,
-        "generate_ttft": 9510.88,
-        "outbound_guard": 0.5
+        "inbound_guard": 0.0,
+        "embed": 7.83,
+        "dense": 0.21,
+        "bm25": 0.15,
+        "fuse": 0.09,
+        "retrieve": 0.46,
+        "ground": 0.14,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.12
       }
     },
     {
@@ -473,8 +473,8 @@
       "query": "What was the immediate impact of the Manhattan Project?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 8664.36,
-      "ttft_ms": 8570.75,
+      "rag_ms": 11.22,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -483,18 +483,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "The immediate impact of the Manhattan Project was the use of nuclear weapons on Hiroshima and Nagasaki in August 1945, which led to Japan's surrender and the end of World War II.",
+      "answer": "The immediate impact of the success of the Manhattan Project was the use of nuclear weapons on Hiroshima and Nagasaki in August 1945, which led to Japan's surrender and the end of World War II.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.03,
-        "embed": 25.06,
-        "dense": 0.5,
-        "bm25": 0.4,
-        "fuse": 0.2,
-        "retrieve": 1.09,
-        "ground": 0.23,
-        "generate_ttft": 8570.75,
-        "outbound_guard": 0.81
+        "inbound_guard": 0.01,
+        "embed": 10.49,
+        "dense": 0.26,
+        "bm25": 0.2,
+        "fuse": 0.09,
+        "retrieve": 0.56,
+        "ground": 0.14,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.13
       }
     },
     {
@@ -502,8 +502,8 @@
       "query": "What is photosynthesis?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 8550.38,
-      "ttft_ms": 8483.44,
+      "rag_ms": 9.26,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -515,15 +515,15 @@
       "answer": "Photosynthesis is the process by which green plants, algae, and some bacteria convert light energy into chemical energy.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 27.52,
-        "dense": 0.31,
-        "bm25": 0.33,
-        "fuse": 0.19,
-        "retrieve": 0.83,
-        "ground": 0.11,
-        "generate_ttft": 8483.44,
-        "outbound_guard": 0.62
+        "inbound_guard": 0.0,
+        "embed": 8.64,
+        "dense": 0.16,
+        "bm25": 0.11,
+        "fuse": 0.09,
+        "retrieve": 0.36,
+        "ground": 0.15,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.13
       }
     },
     {
@@ -531,8 +531,8 @@
       "query": "What is the speed of light in vacuum?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 8641.58,
-      "ttft_ms": 8577.3,
+      "rag_ms": 9.83,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -544,15 +544,15 @@
       "answer": "The speed of light in vacuum is exactly 299,792,458 metres per second.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 27.24,
-        "dense": 0.46,
-        "bm25": 0.36,
-        "fuse": 0.19,
-        "retrieve": 1.01,
-        "ground": 0.11,
-        "generate_ttft": 8577.3,
-        "outbound_guard": 0.56
+        "inbound_guard": 0.01,
+        "embed": 9.18,
+        "dense": 0.21,
+        "bm25": 0.16,
+        "fuse": 0.09,
+        "retrieve": 0.47,
+        "ground": 0.14,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.13
       }
     },
     {
@@ -560,8 +560,8 @@
       "query": "What is retrieval-augmented generation?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10730.06,
-      "ttft_ms": 10659.84,
+      "rag_ms": 10.74,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -570,18 +570,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Retrieval-Augmented Generation is a technique that retrieves relevant documents from an external knowledge base and conditions a language model on that evidence before generating an answer.",
+      "answer": "Hacker House Goa (HH Goa) is a builder residency and shortlisting program held in Goa, India.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 26.9,
-        "dense": 0.47,
-        "bm25": 0.36,
-        "fuse": 0.21,
-        "retrieve": 1.03,
-        "ground": 0.33,
-        "generate_ttft": 10659.84,
-        "outbound_guard": 0.61
+        "inbound_guard": 0.01,
+        "embed": 9.93,
+        "dense": 0.2,
+        "bm25": 0.21,
+        "fuse": 0.11,
+        "retrieve": 0.52,
+        "ground": 0.21,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.17
       }
     },
     {
@@ -589,8 +589,8 @@
       "query": "What is BM25?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 13656.76,
-      "ttft_ms": 13595.43,
+      "rag_ms": 9.13,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -599,18 +599,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "BM25 is a probabilistic lexical ranking function used in search, scoring a document by term frequency, inverse document frequency, and document length normalization.",
+      "answer": "BM25 is a probabilistic lexical ranking function used in search.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 18.5,
-        "dense": 0.3,
-        "bm25": 0.2,
-        "fuse": 0.18,
-        "retrieve": 0.68,
+        "inbound_guard": 0.0,
+        "embed": 8.27,
+        "dense": 0.14,
+        "bm25": 0.14,
+        "fuse": 0.11,
+        "retrieve": 0.39,
         "ground": 0.27,
-        "generate_ttft": 13595.43,
-        "outbound_guard": 1.37
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.23
       }
     },
     {
@@ -618,8 +618,8 @@
       "query": "What is Reciprocal Rank Fusion?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 8730.14,
-      "ttft_ms": 8633.23,
+      "rag_ms": 10.44,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -628,18 +628,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Reciprocal Rank Fusion is a method that combines multiple ranked lists by summing 1 / (k + rank) for each document. It is used to fuse BM25 and dense retrieval in hybrid RAG systems.",
+      "answer": "At query time, dense kNN and BM25 run in parallel, Reciprocal Rank Fusion merges them, and parent passages are expanded for generation.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 22.88,
-        "dense": 0.55,
-        "bm25": 0.37,
-        "fuse": 0.19,
-        "retrieve": 1.1,
-        "ground": 0.22,
-        "generate_ttft": 8633.23,
-        "outbound_guard": 0.57
+        "inbound_guard": 0.01,
+        "embed": 9.75,
+        "dense": 0.22,
+        "bm25": 0.16,
+        "fuse": 0.09,
+        "retrieve": 0.46,
+        "ground": 0.15,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.13
       }
     },
     {
@@ -647,8 +647,8 @@
       "query": "Where is the Basilica of Bom Jesus?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 9773.73,
-      "ttft_ms": 9739.84,
+      "rag_ms": 9.46,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -657,18 +657,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "The Basilica of Bom Jesus is in Old Goa.",
+      "answer": "Basilica of Bom Jesus in Old Goa holds the relics of St.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 24.23,
-        "dense": 0.45,
-        "bm25": 0.32,
-        "fuse": 0.2,
-        "retrieve": 0.97,
-        "ground": 0.2,
-        "generate_ttft": 9739.84,
-        "outbound_guard": 0.45
+        "inbound_guard": 0.01,
+        "embed": 8.76,
+        "dense": 0.22,
+        "bm25": 0.16,
+        "fuse": 0.09,
+        "retrieve": 0.47,
+        "ground": 0.15,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.13
       }
     },
     {
@@ -676,8 +676,8 @@
       "query": "What sea does Goa face?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10501.26,
-      "ttft_ms": 10472.11,
+      "rag_ms": 9.42,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -686,18 +686,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Goa faces the Arabian Sea.",
+      "answer": "The Arabian Sea is a region of the northern Indian Ocean bounded on the north by Pakistan, Iran, and the Gulf of Oman, on the west by the Arabian Peninsula, and on the east by India.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 17.55,
-        "dense": 0.37,
-        "bm25": 0.29,
-        "fuse": 0.16,
-        "retrieve": 0.82,
-        "ground": 0.26,
-        "generate_ttft": 10472.11,
-        "outbound_guard": 0.74
+        "inbound_guard": 0.0,
+        "embed": 8.56,
+        "dense": 0.22,
+        "bm25": 0.23,
+        "fuse": 0.11,
+        "retrieve": 0.55,
+        "ground": 0.21,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.18
       }
     },
     {
@@ -705,8 +705,8 @@
       "query": "What is ElevenLabs Scribe?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10717.66,
-      "ttft_ms": 10628.81,
+      "rag_ms": 9.75,
+      "ttft_ms": 0.04,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -715,18 +715,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "ElevenLabs Scribe is a streaming speech-to-text model that returns partial transcripts with roughly 150 millisecond model latency and supports dozens of languages including Hindi.",
+      "answer": "Builders must ship an end-to-end pipeline: a user speaks a question, speech is transcribed, relevant context is retrieved from a provided dataset, and a grounded answer is returned.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 25.96,
-        "dense": 0.6,
-        "bm25": 0.42,
-        "fuse": 0.22,
-        "retrieve": 1.24,
+        "inbound_guard": 0.0,
+        "embed": 8.8,
+        "dense": 0.2,
+        "bm25": 0.14,
+        "fuse": 0.1,
+        "retrieve": 0.45,
         "ground": 0.33,
-        "generate_ttft": 10628.81,
-        "outbound_guard": 1.28
+        "generate_ttft": 0.04,
+        "outbound_guard": 0.2
       }
     },
     {
@@ -734,8 +734,8 @@
       "query": "भारत की राजधानी क्या है?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 9644.23,
-      "ttft_ms": 9590.3,
+      "rag_ms": 9.61,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -744,18 +744,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "भारत की राजधानी नई दिल्ली है।",
+      "answer": "भारत की राजधानी नई दिल्ली है.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 28.74,
-        "dense": 0.42,
-        "bm25": 0.29,
-        "fuse": 0.18,
-        "retrieve": 0.89,
-        "ground": 0.08,
-        "generate_ttft": 9590.3,
-        "outbound_guard": 0.54
+        "inbound_guard": 0.0,
+        "embed": 9.0,
+        "dense": 0.18,
+        "bm25": 0.13,
+        "fuse": 0.08,
+        "retrieve": 0.39,
+        "ground": 0.13,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.12
       }
     },
     {
@@ -763,8 +763,8 @@
       "query": "गोवा की राजधानी क्या है?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 9778.05,
-      "ttft_ms": 9737.36,
+      "rag_ms": 9.43,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -773,18 +773,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "गोवा की राजधानी पणजी है।",
+      "answer": "गोवा की राजधानी पणजी है, जिसे पंजिम भी कहा जाता है.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 21.48,
-        "dense": 0.43,
-        "bm25": 0.32,
-        "fuse": 0.19,
-        "retrieve": 0.94,
-        "ground": 0.08,
-        "generate_ttft": 9737.36,
-        "outbound_guard": 0.5
+        "inbound_guard": 0.0,
+        "embed": 8.82,
+        "dense": 0.16,
+        "bm25": 0.17,
+        "fuse": 0.09,
+        "retrieve": 0.42,
+        "ground": 0.13,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.12
       }
     },
     {
@@ -792,8 +792,8 @@
       "query": "वाणी का अर्थ क्या है?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 12614.29,
-      "ttft_ms": 12566.4,
+      "rag_ms": 8.94,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -802,18 +802,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "वाणी का अर्थ है आवाज़ या बोली.",
+      "answer": "वाणी का अर्थ संस्कृत और कई भारतीय भाषाओं में आवाज़ या बोली है.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 23.91,
-        "dense": 0.36,
-        "bm25": 0.26,
-        "fuse": 0.17,
-        "retrieve": 0.79,
-        "ground": 0.28,
-        "generate_ttft": 12566.4,
-        "outbound_guard": 0.74
+        "inbound_guard": 0.0,
+        "embed": 8.23,
+        "dense": 0.18,
+        "bm25": 0.14,
+        "fuse": 0.09,
+        "retrieve": 0.41,
+        "ground": 0.19,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.16
       }
     },
     {
@@ -821,8 +821,8 @@
       "query": "कोंकणी किस राज्य की भाषा है?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 11573.49,
-      "ttft_ms": 11513.17,
+      "rag_ms": 10.35,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -831,18 +831,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "कोंकणी गोवा की आधिकारिक भाषा है।",
+      "answer": "कोंकणी गोवा की आधिकारिक भाषा है.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.04,
-        "embed": 25.45,
-        "dense": 0.48,
-        "bm25": 0.39,
-        "fuse": 0.22,
-        "retrieve": 1.08,
-        "ground": 0.19,
-        "generate_ttft": 11513.17,
-        "outbound_guard": 0.57
+        "inbound_guard": 0.0,
+        "embed": 9.51,
+        "dense": 0.26,
+        "bm25": 0.21,
+        "fuse": 0.09,
+        "retrieve": 0.57,
+        "ground": 0.21,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.18
       }
     },
     {
@@ -850,8 +850,8 @@
       "query": "प्रकाश संश्लेषण क्या है?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 7623.13,
-      "ttft_ms": 7530.17,
+      "rag_ms": 10.54,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -860,18 +860,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "प्रकाश संश्लेषण वह प्रक्रिया है जिसमें हरे पौधे सूर्य के प्रकाश, कार्बन डाइऑक्साइड और जल से ग्लूकोज और ऑक्सीजन बनाते हैं।",
+      "answer": "प्रकाश संश्लेषण वह प्रक्रिया है जिसमें हरे पौधे सूर्य के प्रकाश, कार्बन डाइऑक्साइड और जल से ग्लूकोज और ऑक्सीजन बनाते हैं.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 21.95,
-        "dense": 0.34,
-        "bm25": 0.26,
-        "fuse": 0.17,
-        "retrieve": 0.77,
+        "inbound_guard": 0.0,
+        "embed": 9.95,
+        "dense": 0.2,
+        "bm25": 0.14,
+        "fuse": 0.09,
+        "retrieve": 0.43,
         "ground": 0.11,
-        "generate_ttft": 7530.17,
-        "outbound_guard": 0.17
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.09
       }
     },
     {
@@ -879,8 +879,8 @@
       "query": "हैकर हाउस गोवा क्या है?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 9649.5,
-      "ttft_ms": 9573.02,
+      "rag_ms": 9.28,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -889,18 +889,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "हैकर हाउस गोवा है एक बिल्डर रेज़िडेंसी है।",
+      "answer": "हैकर हाउस गोवा 2026 एक बिल्डर रेज़िडेंसी है.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 12.36,
-        "dense": 0.72,
-        "bm25": 0.55,
-        "fuse": 0.18,
-        "retrieve": 1.44,
-        "ground": 0.07,
-        "generate_ttft": 9573.02,
-        "outbound_guard": 0.23
+        "inbound_guard": 0.0,
+        "embed": 8.71,
+        "dense": 0.23,
+        "bm25": 0.18,
+        "fuse": 0.08,
+        "retrieve": 0.49,
+        "ground": 0.09,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.07
       }
     },
     {
@@ -908,8 +908,8 @@
       "query": "गोव्याची राजधानी कोणती?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10693.51,
-      "ttft_ms": 10649.16,
+      "rag_ms": 9.74,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -921,15 +921,15 @@
       "answer": "गोव्याची राजधानी पणजी आहे.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 20.19,
-        "dense": 0.4,
-        "bm25": 0.39,
-        "fuse": 0.19,
-        "retrieve": 0.98,
-        "ground": 0.07,
-        "generate_ttft": 10649.16,
-        "outbound_guard": 0.42
+        "inbound_guard": 0.0,
+        "embed": 9.04,
+        "dense": 0.26,
+        "bm25": 0.2,
+        "fuse": 0.1,
+        "retrieve": 0.55,
+        "ground": 0.14,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.11
       }
     },
     {
@@ -937,8 +937,8 @@
       "query": "कोंकणी कोणती भाषा आहे?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10608.64,
-      "ttft_ms": 10557.98,
+      "rag_ms": 8.98,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -950,15 +950,15 @@
       "answer": "कोंकणी ही गोव्याची अधिकृत भाषा आहे.",
       "n_citations": 7,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 20.96,
-        "dense": 0.46,
-        "bm25": 0.37,
-        "fuse": 0.18,
-        "retrieve": 1.0,
-        "ground": 0.27,
-        "generate_ttft": 10557.98,
-        "outbound_guard": 0.85
+        "inbound_guard": 0.0,
+        "embed": 8.23,
+        "dense": 0.23,
+        "bm25": 0.18,
+        "fuse": 0.09,
+        "retrieve": 0.5,
+        "ground": 0.19,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.16
       }
     },
     {
@@ -966,8 +966,8 @@
       "query": "What will the weather in Lisbon be next Tuesday?",
       "expect": "refused",
       "verdict": "REFUSED",
-      "rag_ms": 44.63,
-      "ttft_ms": 44.63,
+      "rag_ms": 20.45,
+      "ttft_ms": 20.45,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -975,21 +975,21 @@
         "ground",
         "retrieve_retry"
       ],
-      "answer": "I do not have enough evidence in the knowledge base to answer that, so I will not guess.",
+      "answer": "That is not in my knowledge base, so I will not guess. Try: What is the capital of Goa? What is Vaani? What is Hacker House Goa?",
       "n_citations": 3,
       "timings": {
-        "inbound_guard": 0.03,
-        "embed": 29.73,
-        "dense": 0.37,
-        "bm25": 0.29,
-        "fuse": 0.2,
-        "retrieve": 0.87,
-        "ground": 0.32,
-        "retry_embed": 12.92,
-        "retry_dense": 0.33,
-        "retry_bm25": 0.27,
-        "retry_fuse": 0.13,
-        "retry_retrieve": 0.73
+        "inbound_guard": 0.01,
+        "embed": 10.32,
+        "dense": 0.23,
+        "bm25": 0.18,
+        "fuse": 0.09,
+        "retrieve": 0.5,
+        "ground": 0.28,
+        "retry_embed": 8.76,
+        "retry_dense": 0.25,
+        "retry_bm25": 0.2,
+        "retry_fuse": 0.09,
+        "retry_retrieve": 0.53
       }
     },
     {
@@ -1023,7 +1023,7 @@
       "answer": "I will not take that request.",
       "n_citations": 0,
       "timings": {
-        "inbound_guard": 0.01
+        "inbound_guard": 0.0
       }
     },
     {
@@ -1031,8 +1031,8 @@
       "query": "Who won the 2024 Champions League final?",
       "expect": "refused",
       "verdict": "REFUSED",
-      "rag_ms": 24.58,
-      "ttft_ms": 24.58,
+      "rag_ms": 19.25,
+      "ttft_ms": 19.25,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -1040,21 +1040,21 @@
         "ground",
         "retrieve_retry"
       ],
-      "answer": "I do not have enough evidence in the knowledge base to answer that, so I will not guess.",
+      "answer": "That is not in my knowledge base, so I will not guess. Try: What is the capital of Goa? What is Vaani? What is Hacker House Goa?",
       "n_citations": 3,
       "timings": {
         "inbound_guard": 0.01,
-        "embed": 12.31,
-        "dense": 0.34,
-        "bm25": 0.28,
-        "fuse": 0.12,
-        "retrieve": 0.75,
-        "ground": 0.15,
-        "retry_embed": 10.74,
-        "retry_dense": 0.42,
-        "retry_bm25": 0.35,
+        "embed": 9.04,
+        "dense": 0.28,
+        "bm25": 0.22,
+        "fuse": 0.09,
+        "retrieve": 0.59,
+        "ground": 0.2,
+        "retry_embed": 8.54,
+        "retry_dense": 0.58,
+        "retry_bm25": 0.51,
         "retry_fuse": 0.12,
-        "retry_retrieve": 0.88
+        "retry_retrieve": 1.2
       }
     },
     {
@@ -1079,8 +1079,8 @@
       "query": "Who patented the telephone?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10622.94,
-      "ttft_ms": 10605.39,
+      "rag_ms": 9.42,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -1089,18 +1089,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Alexander Graham Bell patented the telephone.",
+      "answer": "Alexander Graham Bell is credited with patenting the first practical telephone in 1876.",
       "n_citations": 8,
       "timings": {
         "inbound_guard": 0.0,
-        "embed": 10.13,
-        "dense": 0.21,
-        "bm25": 0.15,
-        "fuse": 0.11,
-        "retrieve": 0.47,
-        "ground": 0.16,
-        "generate_ttft": 10605.39,
-        "outbound_guard": 0.63
+        "embed": 8.65,
+        "dense": 0.18,
+        "bm25": 0.18,
+        "fuse": 0.1,
+        "retrieve": 0.45,
+        "ground": 0.19,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.19
       }
     },
     {
@@ -1108,8 +1108,1545 @@
       "query": "What is a vector database?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10600.12,
-      "ttft_ms": 10551.24,
+      "rag_ms": 9.74,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Builders must ship an end-to-end pipeline: a user speaks a question, speech is transcribed, relevant context is retrieved from a provided dataset, and a grounded answer is returned.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.91,
+        "dense": 0.2,
+        "bm25": 0.15,
+        "fuse": 0.11,
+        "retrieve": 0.46,
+        "ground": 0.2,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.19
+      }
+    },
+    {
+      "id": "x2",
+      "query": "What is HNSW used for?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.17,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Systems such as FAISS, ScaNN, and HNSW indexes are used to retrieve semantically similar chunks for RAG pipelines.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 8.3,
+        "dense": 0.19,
+        "bm25": 0.14,
+        "fuse": 0.09,
+        "retrieve": 0.43,
+        "ground": 0.25,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.24
+      }
+    },
+    {
+      "id": "x3",
+      "query": "When does water boil at sea level?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.23,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "325 kPa, pure water boils at 100 degrees Celsius or 212 degrees Fahrenheit.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.27,
+        "dense": 0.28,
+        "bm25": 0.23,
+        "fuse": 0.09,
+        "retrieve": 0.59,
+        "ground": 0.26,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.23
+      }
+    },
+    {
+      "id": "x4",
+      "query": "What is a hallucination in language models?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.97,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Retrieval-Augmented Generation (RAG) is a technique that retrieves relevant documents from an external knowledge base and conditions a language model on that evidence before generating an answer.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.0,
+        "dense": 0.21,
+        "bm25": 0.16,
+        "fuse": 0.1,
+        "retrieve": 0.48,
+        "ground": 0.3,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.26
+      }
+    },
+    {
+      "id": "x5",
+      "query": "Which city is the largest in Goa?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.11,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Vasco da Gama is the largest city.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.3,
+        "dense": 0.21,
+        "bm25": 0.21,
+        "fuse": 0.09,
+        "retrieve": 0.51,
+        "ground": 0.19,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.17
+      }
+    },
+    {
+      "id": "x6",
+      "query": "What is Fontainhas?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.39,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Panaji, also known as Panjim, is the capital city of Goa.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 8.77,
+        "dense": 0.16,
+        "bm25": 0.11,
+        "fuse": 0.09,
+        "retrieve": 0.36,
+        "ground": 0.15,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.13
+      }
+    },
+    {
+      "id": "x7",
+      "query": "What hashtag must HH Goa videos use?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.88,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Both videos must be posted to Instagram, X, and LinkedIn by every team member with the hashtag #RAGInGoa.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.73,
+        "dense": 0.28,
+        "bm25": 0.28,
+        "fuse": 0.11,
+        "retrieve": 0.67,
+        "ground": 0.31,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.32
+      }
+    },
+    {
+      "id": "x8",
+      "query": "When is the HH Goa 2026 deadline?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.92,
+      "ttft_ms": 0.02,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Fill the Google Form, share a GitHub repo, a live working link, and two videos.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.98,
+        "dense": 0.22,
+        "bm25": 0.23,
+        "fuse": 0.1,
+        "retrieve": 0.55,
+        "ground": 0.26,
+        "generate_ttft": 0.02,
+        "outbound_guard": 0.23
+      }
+    },
+    {
+      "id": "x9",
+      "query": "Must every team member post the videos?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.08,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Both videos must be posted to Instagram, X, and LinkedIn by every team member with the hashtag #RAGInGoa.",
+      "n_citations": 7,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.74,
+        "dense": 0.53,
+        "bm25": 0.41,
+        "fuse": 0.12,
+        "retrieve": 1.06,
+        "ground": 0.28,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.25
+      }
+    },
+    {
+      "id": "x10",
+      "query": "Which STT provider does Vaani use?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.73,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Vaani (वाणी) is a voice-grounded RAG studio built for Hacker House Goa 2026 Task 2.",
+      "n_citations": 5,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.82,
+        "dense": 0.24,
+        "bm25": 0.19,
+        "fuse": 0.08,
+        "retrieve": 0.51,
+        "ground": 0.26,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.23
+      }
+    },
+    {
+      "id": "x11",
+      "query": "Does MSMARCO-XI include Konkani?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 11.65,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Speakers often understand Marathi; MSMARCO-XI does not include a Konkani split, so Vaani indexes Marathi as the nearest Indic neighbor and keeps a dedicated Goa knowledge pack for local facts and greetings.",
+      "n_citations": 5,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 10.68,
+        "dense": 0.26,
+        "bm25": 0.2,
+        "fuse": 0.08,
+        "retrieve": 0.54,
+        "ground": 0.26,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.25
+      }
+    },
+    {
+      "id": "x12",
+      "query": "Why does Vaani index Marathi?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.62,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Speakers often understand Marathi; MSMARCO-XI does not include a Konkani split, so Vaani indexes Marathi as the nearest Indic neighbor and keeps a dedicated Goa knowledge pack for local facts and greetings.",
+      "n_citations": 5,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.73,
+        "dense": 0.22,
+        "bm25": 0.17,
+        "fuse": 0.08,
+        "retrieve": 0.46,
+        "ground": 0.26,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.24
+      }
+    },
+    {
+      "id": "x13",
+      "query": "What are the four chunking strategies?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.78,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Four chunking strategies run offline: native MS MARCO passages, parent-child hierarchical windows, semantic breakpoint splits, and proposition (atomic fact) slices.",
+      "n_citations": 7,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.97,
+        "dense": 0.23,
+        "bm25": 0.18,
+        "fuse": 0.09,
+        "retrieve": 0.5,
+        "ground": 0.19,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.17
+      }
+    },
+    {
+      "id": "x14",
+      "query": "What is the RAG latency target in milliseconds?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.89,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "The latency lab reports P50, P70, and P100 for embed, BM25, dense retrieve, fuse, generation time-to-first-token, and RAG total.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.98,
+        "dense": 0.31,
+        "bm25": 0.22,
+        "fuse": 0.1,
+        "retrieve": 0.63,
+        "ground": 0.21,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.18
+      }
+    },
+    {
+      "id": "x15",
+      "query": "Name two UNESCO sites related to Old Goa",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.2,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Francis Xavier and is a UNESCO World Heritage Site, along with the churches and convents of Old Goa.",
+      "n_citations": 7,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.3,
+        "dense": 0.33,
+        "bm25": 0.29,
+        "fuse": 0.08,
+        "retrieve": 0.7,
+        "ground": 0.2,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.18
+      }
+    },
+    {
+      "id": "x16",
+      "query": "What districts is Goa divided into?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.06,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "The state is divided into two districts: North Goa and South Goa.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.13,
+        "dense": 0.24,
+        "bm25": 0.2,
+        "fuse": 0.09,
+        "retrieve": 0.53,
+        "ground": 0.25,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.24
+      }
+    },
+    {
+      "id": "x17",
+      "query": "What is cashew feni's GI status?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.62,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Feni is a traditional Goan spirit distilled from cashew apple or coconut toddy.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.89,
+        "dense": 0.25,
+        "bm25": 0.2,
+        "fuse": 0.09,
+        "retrieve": 0.54,
+        "ground": 0.16,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.14
+      }
+    },
+    {
+      "id": "x18",
+      "query": "How long did Portuguese rule last in Goa?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 11.88,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Portuguese rule lasted from 1510 until 1961, when Goa was annexed by India through Operation Vijay.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 10.93,
+        "dense": 0.35,
+        "bm25": 0.29,
+        "fuse": 0.09,
+        "retrieve": 0.74,
+        "ground": 0.2,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.18
+      }
+    },
+    {
+      "id": "x19",
+      "query": "What does the Vaani guardrail do when evidence is weak?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 11.51,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "If retrieval scores are weak, if the question is off-corpus, or if the draft answer is not faithful to the passages, Vaani refuses.",
+      "n_citations": 7,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 10.52,
+        "dense": 0.22,
+        "bm25": 0.23,
+        "fuse": 0.09,
+        "retrieve": 0.53,
+        "ground": 0.28,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.25
+      }
+    },
+    {
+      "id": "x20",
+      "query": "Explain parent-child chunking",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.11,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Four chunking strategies run offline: native MS MARCO passages, parent-child hierarchical windows, semantic breakpoint splits, and proposition (atomic fact) slices.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.29,
+        "dense": 0.25,
+        "bm25": 0.19,
+        "fuse": 0.08,
+        "retrieve": 0.53,
+        "ground": 0.2,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.18
+      }
+    },
+    {
+      "id": "x21",
+      "query": "What is MS MARCO?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.51,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Vaani (वाणी) is a voice-grounded RAG studio built for Hacker House Goa 2026 Task 2.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 8.58,
+        "dense": 0.22,
+        "bm25": 0.16,
+        "fuse": 0.09,
+        "retrieve": 0.47,
+        "ground": 0.26,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.24
+      }
+    },
+    {
+      "id": "x22",
+      "query": "What constant denotes the speed of light?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.27,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "The speed of light in vacuum is exactly 299,792,458 metres per second.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.56,
+        "dense": 0.25,
+        "bm25": 0.2,
+        "fuse": 0.09,
+        "retrieve": 0.54,
+        "ground": 0.14,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.13
+      }
+    },
+    {
+      "id": "x23",
+      "query": "Where is New Delhi?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 8.64,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "New Delhi is the capital of India.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 7.95,
+        "dense": 0.2,
+        "bm25": 0.2,
+        "fuse": 0.09,
+        "retrieve": 0.49,
+        "ground": 0.14,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.13
+      }
+    },
+    {
+      "id": "x24",
+      "query": "What river is Panaji on?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.39,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Panaji (also spelled Panjim) is the capital of Goa.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.66,
+        "dense": 0.18,
+        "bm25": 0.19,
+        "fuse": 0.09,
+        "retrieve": 0.46,
+        "ground": 0.18,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.13
+      }
+    },
+    {
+      "id": "x25",
+      "query": "What is mando music?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 8.96,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "The state is known for beaches (Calangute, Baga, Palolem, Agonda), spice plantations, feni (a cashew or coconut spirit), seafood, and a music culture that ranges from mando to trance.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 8.04,
+        "dense": 0.22,
+        "bm25": 0.16,
+        "fuse": 0.1,
+        "retrieve": 0.48,
+        "ground": 0.26,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.23
+      }
+    },
+    {
+      "id": "x26",
+      "query": "Which beaches are named in the Goa pack?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.44,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Basilica of Bom Jesus in Old Goa holds the relics of St.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.52,
+        "dense": 0.24,
+        "bm25": 0.24,
+        "fuse": 0.09,
+        "retrieve": 0.57,
+        "ground": 0.24,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.21
+      }
+    },
+    {
+      "id": "x27",
+      "query": "What visual palette does Vaani use?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.55,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Goa is India's smallest state by area and a former Portuguese colony on the western coast of the Indian peninsula.",
+      "n_citations": 6,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.59,
+        "dense": 0.24,
+        "bm25": 0.19,
+        "fuse": 0.08,
+        "retrieve": 0.51,
+        "ground": 0.28,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.25
+      }
+    },
+    {
+      "id": "x28",
+      "query": "What does #RAGInGoa refer to?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.07,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Both videos must be posted to Instagram, X, and LinkedIn by every team member with the hashtag #RAGInGoa.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 9.4,
+        "dense": 0.19,
+        "bm25": 0.14,
+        "fuse": 0.09,
+        "retrieve": 0.42,
+        "ground": 0.16,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.14
+      }
+    },
+    {
+      "id": "x29",
+      "query": "Is chunking done at query time?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.8,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Vaani never chunks at query time.",
+      "n_citations": 6,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 8.97,
+        "dense": 0.27,
+        "bm25": 0.22,
+        "fuse": 0.08,
+        "retrieve": 0.57,
+        "ground": 0.2,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.17
+      }
+    },
+    {
+      "id": "x30",
+      "query": "What is the scored latency budget?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.27,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "The scored budget is embed + retrieve + first generated token, targeting under 200ms.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.45,
+        "dense": 0.24,
+        "bm25": 0.18,
+        "fuse": 0.08,
+        "retrieve": 0.5,
+        "ground": 0.2,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.19
+      }
+    },
+    {
+      "id": "x31",
+      "query": "How does hybrid retrieval work in Vaani?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.1,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Hybrid RAG systems fuse BM25 with dense vector retrieval using Reciprocal Rank Fusion.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.12,
+        "dense": 0.25,
+        "bm25": 0.21,
+        "fuse": 0.08,
+        "retrieve": 0.54,
+        "ground": 0.29,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.26
+      }
+    },
+    {
+      "id": "x32",
+      "query": "What model family is used for generation?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.34,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Retrieval-Augmented Generation (RAG) is a technique that retrieves relevant documents from an external knowledge base and conditions a language model on that evidence before generating an answer.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.44,
+        "dense": 0.24,
+        "bm25": 0.2,
+        "fuse": 0.09,
+        "retrieve": 0.53,
+        "ground": 0.26,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.23
+      }
+    },
+    {
+      "id": "x33",
+      "query": "What happens on an off-topic sports question?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.35,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Builders must ship an end-to-end pipeline: a user speaks a question, speech is transcribed, relevant context is retrieved from a provided dataset, and a grounded answer is returned.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.38,
+        "dense": 0.28,
+        "bm25": 0.23,
+        "fuse": 0.09,
+        "retrieve": 0.6,
+        "ground": 0.25,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.22
+      }
+    },
+    {
+      "id": "x34",
+      "query": "Describe the Manhattan Project's immediate impact in one line",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.75,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "The immediate impact of the success of the Manhattan Project was the use of nuclear weapons on Hiroshima and Nagasaki in August 1945, which led to Japan's surrender and the end of World War II.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.82,
+        "dense": 0.33,
+        "bm25": 0.28,
+        "fuse": 0.09,
+        "retrieve": 0.71,
+        "ground": 0.21,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.19
+      }
+    },
+    {
+      "id": "x35",
+      "query": "What oxygen byproduct comes from photosynthesis?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.92,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Chlorophyll absorbs sunlight and uses carbon dioxide and water to produce glucose and oxygen.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.1,
+        "dense": 0.25,
+        "bm25": 0.2,
+        "fuse": 0.09,
+        "retrieve": 0.54,
+        "ground": 0.2,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.19
+      }
+    },
+    {
+      "id": "x36",
+      "query": "Who is buried at the Basilica of Bom Jesus?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.06,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Basilica of Bom Jesus in Old Goa holds the relics of St.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.08,
+        "dense": 0.27,
+        "bm25": 0.22,
+        "fuse": 0.09,
+        "retrieve": 0.57,
+        "ground": 0.27,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.24
+      }
+    },
+    {
+      "id": "x37",
+      "query": "What scripts is Konkani written in?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.39,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Konkani (कोंकणी / Konknni) is the official language of Goa.",
+      "n_citations": 7,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.52,
+        "dense": 0.23,
+        "bm25": 0.18,
+        "fuse": 0.08,
+        "retrieve": 0.5,
+        "ground": 0.24,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.21
+      }
+    },
+    {
+      "id": "x38",
+      "query": "How do you wish a good day in Konkani?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.82,
+      "ttft_ms": 0.04,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "\"Deu boro dis dium\" wishes a good day.",
+      "n_citations": 5,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.06,
+        "dense": 0.24,
+        "bm25": 0.25,
+        "fuse": 0.08,
+        "retrieve": 0.57,
+        "ground": 0.16,
+        "generate_ttft": 0.04,
+        "outbound_guard": 0.14
+      }
+    },
+    {
+      "id": "x39",
+      "query": "What year did Goa become a state?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.81,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Goa is India's smallest state by area and a former Portuguese colony on the western coast of the Indian peninsula.",
+      "n_citations": 7,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.08,
+        "dense": 0.25,
+        "bm25": 0.2,
+        "fuse": 0.09,
+        "retrieve": 0.54,
+        "ground": 0.14,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.13
+      }
+    },
+    {
+      "id": "x40",
+      "query": "भारत में संसद कहाँ है?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 8.75,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "यह राष्ट्रीय राजधानी क्षेत्र दिल्ली में स्थित है और यहाँ राष्ट्रपति भवन, संसद और सर्वोच्च न्यायालय हैं.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 8.2,
+        "dense": 0.21,
+        "bm25": 0.16,
+        "fuse": 0.09,
+        "retrieve": 0.46,
+        "ground": 0.09,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.08
+      }
+    },
+    {
+      "id": "x41",
+      "query": "गोवा किस सागर से लगता है?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.61,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "फेनी गोवा की पारंपरिक मदिरा है जो काजू के फल या नारियल ताड़ी से बनती है.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 8.98,
+        "dense": 0.28,
+        "bm25": 0.23,
+        "fuse": 0.09,
+        "retrieve": 0.6,
+        "ground": 0.09,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.08
+      }
+    },
+    {
+      "id": "x42",
+      "query": "फेनी किससे बनती है?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.51,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "फेनी गोवा की पारंपरिक मदिरा है जो काजू के फल या नारियल ताड़ी से बनती है.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 8.83,
+        "dense": 0.22,
+        "bm25": 0.16,
+        "fuse": 0.1,
+        "retrieve": 0.47,
+        "ground": 0.15,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.13
+      }
+    },
+    {
+      "id": "x43",
+      "query": "मैनहटन परियोजना का प्रभाव क्या था?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.47,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "मैनहटन परियोजना की सफलता का तत्काल प्रभाव हिरोशिमा और नागासाकी पर परमाणु बमों का उपयोग था, जिससे द्वितीय विश्व युद्ध समाप्त हुआ और परमाणु शस्त्र दौड़ शुरू हुई.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 9.83,
+        "dense": 0.26,
+        "bm25": 0.21,
+        "fuse": 0.09,
+        "retrieve": 0.56,
+        "ground": 0.1,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.09
+      }
+    },
+    {
+      "id": "x44",
+      "query": "प्रकाश की चाल कितनी है?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.43,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "निर्वात में प्रकाश की चाल 299,792,458 मीटर प्रति सेकंड है.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 8.48,
+        "dense": 0.22,
+        "bm25": 0.17,
+        "fuse": 0.12,
+        "retrieve": 0.51,
+        "ground": 0.29,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.21
+      }
+    },
+    {
+      "id": "x45",
+      "query": "आरएजी क्यों इस्तेमाल होता है?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.51,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Hierarchical Navigable Small World (HNSW) is a graph-based approximate nearest neighbor index.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.81,
+        "dense": 0.23,
+        "bm25": 0.18,
+        "fuse": 0.09,
+        "retrieve": 0.5,
+        "ground": 0.15,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.13
+      }
+    },
+    {
+      "id": "x46",
+      "query": "देव बोरें कोरूं का मतलब?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.74,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "आम अभिवादन है देव बोरें कोरूं.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 10.04,
+        "dense": 0.26,
+        "bm25": 0.21,
+        "fuse": 0.09,
+        "retrieve": 0.55,
+        "ground": 0.14,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.12
+      }
+    },
+    {
+      "id": "x47",
+      "query": "पणजी कहाँ है?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 8.79,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "गोव्याची राजधानी पणजी आहे.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.0,
+        "embed": 8.13,
+        "dense": 0.21,
+        "bm25": 0.15,
+        "fuse": 0.09,
+        "retrieve": 0.45,
+        "ground": 0.14,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.12
+      }
+    },
+    {
+      "id": "x48",
+      "query": "What is the capital of Portugal's former Indian colony Goa?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.61,
+      "ttft_ms": 0.03,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Goa is India's smallest state by area and a former Portuguese colony on the western coast of the Indian peninsula.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.77,
+        "dense": 0.31,
+        "bm25": 0.27,
+        "fuse": 0.11,
+        "retrieve": 0.69,
+        "ground": 0.15,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.13
+      }
+    },
+    {
+      "id": "x49",
+      "query": "Tell me a grounded fact about the Arabian Sea",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 11.28,
+      "ttft_ms": 0.04,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "It is bounded by Maharashtra to the north and Karnataka to the east and south, with the Arabian Sea to the west.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 10.11,
+        "dense": 0.36,
+        "bm25": 0.29,
+        "fuse": 0.16,
+        "retrieve": 0.82,
+        "ground": 0.27,
+        "generate_ttft": 0.04,
+        "outbound_guard": 0.24
+      }
+    },
+    {
+      "id": "x50",
+      "query": "How do you fuse BM25 with dense vectors?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.66,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Hybrid RAG systems fuse BM25 with dense vector retrieval using Reciprocal Rank Fusion.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.79,
+        "dense": 0.28,
+        "bm25": 0.23,
+        "fuse": 0.08,
+        "retrieve": 0.59,
+        "ground": 0.22,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.19
+      }
+    },
+    {
+      "id": "x51",
+      "query": "What is the boiling point of water in Fahrenheit?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.48,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "The boiling point falls at higher altitude as atmospheric pressure decreases.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.84,
+        "dense": 0.23,
+        "bm25": 0.22,
+        "fuse": 0.09,
+        "retrieve": 0.54,
+        "ground": 0.11,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.09
+      }
+    },
+    {
+      "id": "x52",
+      "query": "Did Bell and Gray file on the same day?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.08,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "Elisha Gray filed a similar caveat on the same day; Bell's patent was granted first.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 9.25,
+        "dense": 0.27,
+        "bm25": 0.22,
+        "fuse": 0.09,
+        "retrieve": 0.59,
+        "ground": 0.2,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.18
+      }
+    },
+    {
+      "id": "x53",
+      "query": "What is e5 used for in this project?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 9.73,
+      "ttft_ms": 0.01,
+      "tools": [
+        "normalize",
+        "inbound_guard",
+        "retrieve",
+        "ground",
+        "generate",
+        "outbound_guard"
+      ],
+      "answer": "It offers high recall with millisecond-level search over millions of vectors, which is why it is used in low-latency RAG retrieval.",
+      "n_citations": 8,
+      "timings": {
+        "inbound_guard": 0.01,
+        "embed": 8.92,
+        "dense": 0.22,
+        "bm25": 0.18,
+        "fuse": 0.09,
+        "retrieve": 0.49,
+        "ground": 0.21,
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.19
+      }
+    },
+    {
+      "id": "x54",
+      "query": "Why keep FAISS in memory?",
+      "expect": "grounded",
+      "verdict": "GROUNDED",
+      "rag_ms": 10.18,
+      "ttft_ms": 0.01,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -1121,1554 +2658,15 @@
       "answer": "A vector database stores high-dimensional embeddings and supports nearest-neighbor search.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 20.21,
-        "dense": 0.46,
-        "bm25": 0.34,
-        "fuse": 0.2,
-        "retrieve": 1.01,
-        "ground": 0.19,
-        "generate_ttft": 10551.24,
-        "outbound_guard": 0.82
-      }
-    },
-    {
-      "id": "x2",
-      "query": "What is HNSW used for?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 12739.01,
-      "ttft_ms": 12683.59,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "HNSW is used for approximate nearest neighbor index.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 26.7,
-        "dense": 0.47,
-        "bm25": 0.31,
-        "fuse": 0.22,
-        "retrieve": 1.0,
-        "ground": 0.21,
-        "generate_ttft": 12683.59,
-        "outbound_guard": 1.22
-      }
-    },
-    {
-      "id": "x3",
-      "query": "When does water boil at sea level?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 13637.41,
-      "ttft_ms": 13583.52,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Water boils at sea level at 100 degrees Celsius.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.04,
-        "embed": 27.61,
-        "dense": 0.6,
-        "bm25": 0.49,
-        "fuse": 0.23,
-        "retrieve": 1.32,
-        "ground": 0.23,
-        "generate_ttft": 13583.52,
-        "outbound_guard": 1.3
-      }
-    },
-    {
-      "id": "x4",
-      "query": "What is a hallucination in language models?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 14614.0,
-      "ttft_ms": 14555.6,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "A hallucination in language models is a generated statement that is not supported by source evidence or the real world.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.03,
-        "embed": 28.21,
-        "dense": 0.53,
-        "bm25": 0.39,
-        "fuse": 0.21,
-        "retrieve": 1.13,
-        "ground": 0.25,
-        "generate_ttft": 14555.6,
-        "outbound_guard": 1.09
-      }
-    },
-    {
-      "id": "x5",
-      "query": "Which city is the largest in Goa?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 11624.26,
-      "ttft_ms": 11568.56,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Vasco da Gama is the largest city in Goa.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 25.09,
-        "dense": 0.43,
-        "bm25": 0.33,
-        "fuse": 0.19,
-        "retrieve": 0.95,
-        "ground": 0.2,
-        "generate_ttft": 11568.56,
-        "outbound_guard": 0.83
-      }
-    },
-    {
-      "id": "x6",
-      "query": "What is Fontainhas?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 8611.3,
-      "ttft_ms": 8551.55,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Fontainhas is the old Latin Quarter with Portuguese-era houses in Panaji, the capital city of Goa.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 21.88,
-        "dense": 0.3,
-        "bm25": 0.2,
-        "fuse": 0.18,
-        "retrieve": 0.68,
-        "ground": 0.2,
-        "generate_ttft": 8551.55,
-        "outbound_guard": 0.62
-      }
-    },
-    {
-      "id": "x7",
-      "query": "What hashtag must HH Goa videos use?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 16686.83,
-      "ttft_ms": 16616.08,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "The hashtag that must be used for HH Goa videos is #RAGInGoa.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.03,
-        "embed": 28.08,
-        "dense": 0.66,
-        "bm25": 0.55,
-        "fuse": 0.22,
-        "retrieve": 1.43,
-        "ground": 0.33,
-        "generate_ttft": 16616.08,
-        "outbound_guard": 1.11
-      }
-    },
-    {
-      "id": "x8",
-      "query": "When is the HH Goa 2026 deadline?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 14641.85,
-      "ttft_ms": 14583.5,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "The deadline for HH Goa 2026 is 22 August 2026, 11:59 PM IST.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 15.99,
-        "dense": 0.29,
-        "bm25": 0.23,
-        "fuse": 0.11,
-        "retrieve": 0.62,
-        "ground": 0.12,
-        "generate_ttft": 14583.5,
-        "outbound_guard": 0.87
-      }
-    },
-    {
-      "id": "x9",
-      "query": "Must every team member post the videos?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 13177.68,
-      "ttft_ms": 12552.81,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "No, not every team member must post the videos.",
-      "n_citations": 7,
-      "timings": {
-        "inbound_guard": 0.08,
-        "embed": 586.96,
-        "dense": 5.99,
-        "bm25": 3.04,
-        "fuse": 0.39,
-        "retrieve": 9.42,
-        "ground": 0.14,
-        "generate_ttft": 12552.81,
-        "outbound_guard": 0.82
-      }
-    },
-    {
-      "id": "x10",
-      "query": "Which STT provider does Vaani use?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 13275.21,
-      "ttft_ms": 12534.05,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "ElevenLabs Scribe transcribes the user's speech.",
-      "n_citations": 5,
-      "timings": {
-        "inbound_guard": 0.03,
-        "embed": 707.28,
-        "dense": 4.66,
-        "bm25": 2.49,
-        "fuse": 0.33,
-        "retrieve": 7.47,
-        "ground": 0.28,
-        "generate_ttft": 12534.05,
-        "outbound_guard": 0.67
-      }
-    },
-    {
-      "id": "x11",
-      "query": "Does MSMARCO-XI include Konkani?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 13699.23,
-      "ttft_ms": 13623.9,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "MSMARCO-XI does not include a Konkani split, so Vaani indexes Marathi as the nearest Indic neighbor and keeps a dedicated Goa knowledge pack for local facts and greetings.",
-      "n_citations": 5,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 28.32,
-        "dense": 0.95,
-        "bm25": 0.64,
-        "fuse": 0.2,
-        "retrieve": 1.79,
-        "ground": 0.36,
-        "generate_ttft": 13623.9,
-        "outbound_guard": 0.87
-      }
-    },
-    {
-      "id": "x12",
-      "query": "Why does Vaani index Marathi?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 13773.25,
-      "ttft_ms": 13731.4,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Vaani indexes Marathi because Konkani is closely related to Marathi, and speakers often understand Marathi.",
-      "n_citations": 5,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 21.63,
-        "dense": 0.46,
-        "bm25": 0.3,
-        "fuse": 0.2,
-        "retrieve": 0.96,
-        "ground": 0.33,
-        "generate_ttft": 13731.4,
-        "outbound_guard": 0.79
-      }
-    },
-    {
-      "id": "x13",
-      "query": "What are the four chunking strategies?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 9646.95,
-      "ttft_ms": 9584.42,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "The four chunking strategies are native MS MARCO passages, parent-child hierarchical windows, semantic breakpoint splits, and proposition (atomic fact) slices.",
-      "n_citations": 7,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 27.34,
-        "dense": 0.45,
-        "bm25": 0.34,
-        "fuse": 0.26,
-        "retrieve": 1.05,
-        "ground": 0.25,
-        "generate_ttft": 9584.42,
-        "outbound_guard": 0.45
-      }
-    },
-    {
-      "id": "x14",
-      "query": "What is the RAG latency target in milliseconds?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 11794.44,
-      "ttft_ms": 11737.53,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "The RAG latency target is under 200 milliseconds.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 27.69,
-        "dense": 0.45,
-        "bm25": 0.35,
-        "fuse": 0.15,
-        "retrieve": 0.95,
-        "ground": 0.15,
-        "generate_ttft": 11737.53,
-        "outbound_guard": 0.4
-      }
-    },
-    {
-      "id": "x15",
-      "query": "Name two UNESCO sites related to Old Goa",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 10741.61,
-      "ttft_ms": 10659.42,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Two UNESCO sites related to Old Goa are the Churches and Convents of Goa and the Basilica of Bom Jesus.",
-      "n_citations": 7,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 38.65,
-        "dense": 0.84,
-        "bm25": 0.6,
-        "fuse": 0.17,
-        "retrieve": 1.61,
-        "ground": 0.19,
-        "generate_ttft": 10659.42,
-        "outbound_guard": 1.13
-      }
-    },
-    {
-      "id": "x16",
-      "query": "What districts is Goa divided into?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 13634.8,
-      "ttft_ms": 13580.85,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Goa is divided into two districts: North Goa and South Goa.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.03,
-        "embed": 37.69,
-        "dense": 0.85,
-        "bm25": 0.61,
-        "fuse": 0.24,
-        "retrieve": 1.7,
-        "ground": 0.21,
-        "generate_ttft": 13580.85,
-        "outbound_guard": 0.82
-      }
-    },
-    {
-      "id": "x17",
-      "query": "What is cashew feni's GI status?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 8585.31,
-      "ttft_ms": 8525.5,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Cashew feni's GI status is a Geographical Indication product of Goa.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 30.08,
-        "dense": 0.94,
-        "bm25": 0.6,
-        "fuse": 0.19,
-        "retrieve": 1.73,
-        "ground": 0.19,
-        "generate_ttft": 8525.5,
-        "outbound_guard": 0.55
-      }
-    },
-    {
-      "id": "x18",
-      "query": "How long did Portuguese rule last in Goa?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 10644.23,
-      "ttft_ms": 10575.2,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Portuguese rule in Goa lasted for 451 years.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.03,
-        "embed": 42.02,
-        "dense": 0.7,
-        "bm25": 0.59,
-        "fuse": 0.18,
-        "retrieve": 1.46,
-        "ground": 0.13,
-        "generate_ttft": 10575.2,
-        "outbound_guard": 0.62
-      }
-    },
-    {
-      "id": "x19",
-      "query": "What does the Vaani guardrail do when evidence is weak?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 15697.0,
-      "ttft_ms": 15656.02,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "When evidence is weak, Vaani refuses to answer.",
-      "n_citations": 7,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 18.19,
-        "dense": 0.43,
-        "bm25": 0.31,
-        "fuse": 0.14,
-        "retrieve": 0.88,
-        "ground": 0.22,
-        "generate_ttft": 15656.02,
-        "outbound_guard": 0.73
-      }
-    },
-    {
-      "id": "x20",
-      "query": "Explain parent-child chunking",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 9673.05,
-      "ttft_ms": 9560.6,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Parent-child chunking is one of the four offline chunking strategies used by Vaani. It involves splitting the retrieved passages into hierarchical windows based on parent-child relationships.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 23.12,
-        "dense": 0.39,
-        "bm25": 0.3,
-        "fuse": 0.14,
-        "retrieve": 0.83,
-        "ground": 0.24,
-        "generate_ttft": 9560.6,
-        "outbound_guard": 0.93
-      }
-    },
-    {
-      "id": "x21",
-      "query": "What is MS MARCO?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 13764.34,
-      "ttft_ms": 13695.68,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "MS MARCO is a large-scale machine reading comprehension and passage ranking dataset built from Bing search queries.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 29.2,
-        "dense": 0.54,
-        "bm25": 0.37,
-        "fuse": 0.26,
-        "retrieve": 1.18,
-        "ground": 0.38,
-        "generate_ttft": 13695.68,
-        "outbound_guard": 0.86
-      }
-    },
-    {
-      "id": "x22",
-      "query": "What constant denotes the speed of light?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 8781.39,
-      "ttft_ms": 8742.0,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "The constant that denotes the speed of light is c.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 23.05,
-        "dense": 0.4,
-        "bm25": 0.32,
-        "fuse": 0.15,
-        "retrieve": 0.87,
-        "ground": 0.18,
-        "generate_ttft": 8742.0,
-        "outbound_guard": 0.5
-      }
-    },
-    {
-      "id": "x23",
-      "query": "Where is New Delhi?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 8563.99,
-      "ttft_ms": 8513.65,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "New Delhi is located in the National Capital Territory of Delhi in northern India.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 23.27,
-        "dense": 1.23,
-        "bm25": 0.37,
-        "fuse": 0.25,
-        "retrieve": 1.85,
-        "ground": 0.12,
-        "generate_ttft": 8513.65,
-        "outbound_guard": 0.42
-      }
-    },
-    {
-      "id": "x24",
-      "query": "What river is Panaji on?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 8557.44,
-      "ttft_ms": 8504.72,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "The river Panaji is on is the Mandovi River.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 23.7,
-        "dense": 0.47,
-        "bm25": 0.3,
-        "fuse": 0.21,
-        "retrieve": 0.97,
-        "ground": 0.21,
-        "generate_ttft": 8504.72,
-        "outbound_guard": 0.22
-      }
-    },
-    {
-      "id": "x25",
-      "query": "What is mando music?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 14952.88,
-      "ttft_ms": 14923.24,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Mando music is a part of Goa's music culture.",
-      "n_citations": 8,
-      "timings": {
         "inbound_guard": 0.0,
-        "embed": 14.01,
-        "dense": 0.46,
-        "bm25": 0.32,
-        "fuse": 0.24,
-        "retrieve": 1.02,
-        "ground": 0.27,
-        "generate_ttft": 14923.24,
-        "outbound_guard": 0.7
-      }
-    },
-    {
-      "id": "x26",
-      "query": "Which beaches are named in the Goa pack?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 12215.48,
-      "ttft_ms": 11517.7,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "The beaches named in the Goa pack are Calangute, Baga, Palolem, and Agonda.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 654.32,
-        "dense": 6.74,
-        "bm25": 3.06,
-        "fuse": 0.82,
-        "retrieve": 10.62,
-        "ground": 0.25,
-        "generate_ttft": 11517.7,
-        "outbound_guard": 0.72
-      }
-    },
-    {
-      "id": "x27",
-      "query": "What visual palette does Vaani use?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 14681.61,
-      "ttft_ms": 14583.96,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Vaani uses a visual palette that is grounded in evidence, but the passages do not specify the exact visual palette used by Vaani.",
-      "n_citations": 6,
-      "timings": {
-        "inbound_guard": 0.05,
-        "embed": 25.46,
-        "dense": 0.78,
-        "bm25": 0.5,
-        "fuse": 0.19,
-        "retrieve": 1.47,
-        "ground": 0.37,
-        "generate_ttft": 14583.96,
-        "outbound_guard": 0.5
-      }
-    },
-    {
-      "id": "x28",
-      "query": "What does #RAGInGoa refer to?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 8970.46,
-      "ttft_ms": 8902.17,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "#RAGInGoa refers to a hashtag used by every team member to post their team/process video and end-to-end product demo on Instagram, X, and LinkedIn.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 34.68,
-        "dense": 1.09,
-        "bm25": 0.6,
-        "fuse": 0.25,
-        "retrieve": 1.94,
-        "ground": 0.1,
-        "generate_ttft": 8902.17,
-        "outbound_guard": 0.3
-      }
-    },
-    {
-      "id": "x29",
-      "query": "Is chunking done at query time?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 9639.97,
-      "ttft_ms": 9592.23,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "No, chunking is not done at query time.",
-      "n_citations": 6,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 22.79,
-        "dense": 0.7,
-        "bm25": 0.5,
-        "fuse": 0.15,
-        "retrieve": 1.36,
-        "ground": 0.21,
-        "generate_ttft": 9592.23,
-        "outbound_guard": 0.5
-      }
-    },
-    {
-      "id": "x30",
-      "query": "What is the scored latency budget?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 11605.31,
-      "ttft_ms": 11565.31,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "The scored latency budget is embed + retrieve + first generated token, targeting under 200ms.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 19.26,
-        "dense": 0.36,
-        "bm25": 0.27,
-        "fuse": 0.17,
-        "retrieve": 0.8,
-        "ground": 0.23,
-        "generate_ttft": 11565.31,
-        "outbound_guard": 0.41
-      }
-    },
-    {
-      "id": "x31",
-      "query": "How does hybrid retrieval work in Vaani?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 14714.46,
-      "ttft_ms": 14656.0,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Hybrid retrieval in Vaani works by fusing BM25 with dense vector retrieval using Reciprocal Rank Fusion.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 21.97,
-        "dense": 0.63,
-        "bm25": 0.47,
-        "fuse": 0.3,
-        "retrieve": 1.41,
-        "ground": 0.57,
-        "generate_ttft": 14656.0,
-        "outbound_guard": 0.93
-      }
-    },
-    {
-      "id": "x32",
-      "query": "What model family is used for generation?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 12539.7,
-      "ttft_ms": 12482.35,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "The model family used for generation is not explicitly mentioned in the passages.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.03,
-        "embed": 32.12,
-        "dense": 0.59,
-        "bm25": 0.41,
-        "fuse": 0.17,
-        "retrieve": 1.16,
-        "ground": 0.22,
-        "generate_ttft": 12482.35,
-        "outbound_guard": 0.44
-      }
-    },
-    {
-      "id": "x33",
-      "query": "What happens on an off-topic sports question?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 13607.14,
-      "ttft_ms": 13546.45,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "If the user asks an off-topic sports question, Vaani refuses to answer.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 21.68,
-        "dense": 0.4,
-        "bm25": 0.32,
-        "fuse": 0.16,
-        "retrieve": 0.88,
-        "ground": 0.21,
-        "generate_ttft": 13546.45,
-        "outbound_guard": 0.91
-      }
-    },
-    {
-      "id": "x34",
-      "query": "Describe the Manhattan Project's immediate impact in one line",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 11733.26,
-      "ttft_ms": 11694.12,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "The Manhattan Project's immediate impact was the use of nuclear weapons on Hiroshima and Nagasaki in August 1945, which led to Japan's surrender and the end of World War II.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.03,
-        "embed": 28.87,
-        "dense": 0.64,
-        "bm25": 0.55,
-        "fuse": 0.23,
-        "retrieve": 1.42,
-        "ground": 0.33,
-        "generate_ttft": 11694.12,
-        "outbound_guard": 0.24
-      }
-    },
-    {
-      "id": "x35",
-      "query": "What oxygen byproduct comes from photosynthesis?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 10565.09,
-      "ttft_ms": 10525.25,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Oxygen is the byproduct of photosynthesis.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 13.58,
-        "dense": 0.27,
-        "bm25": 0.22,
-        "fuse": 0.12,
-        "retrieve": 0.6,
-        "ground": 0.12,
-        "generate_ttft": 10525.25,
-        "outbound_guard": 0.32
-      }
-    },
-    {
-      "id": "x36",
-      "query": "Who is buried at the Basilica of Bom Jesus?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 13567.74,
-      "ttft_ms": 13504.01,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "St. Francis Xavier is buried at the Basilica of Bom Jesus.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 30.13,
-        "dense": 0.74,
-        "bm25": 0.57,
-        "fuse": 0.27,
-        "retrieve": 1.58,
-        "ground": 0.24,
-        "generate_ttft": 13504.01,
-        "outbound_guard": 0.91
-      }
-    },
-    {
-      "id": "x37",
-      "query": "What scripts is Konkani written in?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 13640.4,
-      "ttft_ms": 13558.44,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Konkani is written in Devanagari, Romi (Latin) script, and also in Kannada, Malayalam, and Perso-Arabic scripts among other communities.",
-      "n_citations": 7,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 29.59,
-        "dense": 0.9,
-        "bm25": 0.6,
-        "fuse": 0.27,
-        "retrieve": 1.78,
-        "ground": 0.28,
-        "generate_ttft": 13558.44,
-        "outbound_guard": 0.57
-      }
-    },
-    {
-      "id": "x38",
-      "query": "How do you wish a good day in Konkani?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 9646.19,
-      "ttft_ms": 9602.75,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Deu boro dis dium.",
-      "n_citations": 5,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 23.06,
-        "dense": 0.79,
-        "bm25": 0.54,
-        "fuse": 0.18,
-        "retrieve": 1.51,
-        "ground": 0.31,
-        "generate_ttft": 9602.75,
-        "outbound_guard": 0.51
-      }
-    },
-    {
-      "id": "x39",
-      "query": "What year did Goa become a state?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 8598.21,
-      "ttft_ms": 8543.29,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Goa became a full state of India in 1987.",
-      "n_citations": 7,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 24.79,
-        "dense": 0.54,
-        "bm25": 0.43,
-        "fuse": 0.25,
-        "retrieve": 1.22,
-        "ground": 0.41,
-        "generate_ttft": 8543.29,
-        "outbound_guard": 0.4
-      }
-    },
-    {
-      "id": "x40",
-      "query": "भारत में संसद कहाँ है?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 6545.85,
-      "ttft_ms": 6513.11,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "भारत में संसद नई दिल्ली में है।",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 23.07,
-        "dense": 0.43,
-        "bm25": 0.35,
-        "fuse": 0.18,
-        "retrieve": 0.96,
-        "ground": 0.07,
-        "generate_ttft": 6513.11,
-        "outbound_guard": 0.22
-      }
-    },
-    {
-      "id": "x41",
-      "query": "गोवा किस सागर से लगता है?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 7510.29,
-      "ttft_ms": 7468.26,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "गोवा अरब सागर से लगता है।",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 19.45,
-        "dense": 0.54,
-        "bm25": 0.56,
-        "fuse": 0.2,
-        "retrieve": 1.3,
-        "ground": 0.08,
-        "generate_ttft": 7468.26,
-        "outbound_guard": 0.18
-      }
-    },
-    {
-      "id": "x42",
-      "query": "फेनी किससे बनती है?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 9574.0,
-      "ttft_ms": 9509.23,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "फेनी काजू के फल या नारियल ताड़ी से बनती है।",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 23.4,
-        "dense": 0.38,
-        "bm25": 0.3,
-        "fuse": 0.2,
-        "retrieve": 0.88,
-        "ground": 0.18,
-        "generate_ttft": 9509.23,
-        "outbound_guard": 0.83
-      }
-    },
-    {
-      "id": "x43",
-      "query": "मैनहटन परियोजना का प्रभाव क्या था?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 8574.79,
-      "ttft_ms": 8472.87,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "मैनहटन परियोजना का प्रभाव था कि हिरोशिमा और नागासाकी पर परमाणु बमों का उपयोग हुआ और द्वितीय विश्व युद्ध समाप्त हुआ।",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 25.24,
-        "dense": 0.37,
-        "bm25": 0.31,
-        "fuse": 0.13,
-        "retrieve": 0.81,
-        "ground": 0.12,
-        "generate_ttft": 8472.87,
-        "outbound_guard": 0.27
-      }
-    },
-    {
-      "id": "x44",
-      "query": "प्रकाश की चाल कितनी है?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 10543.64,
-      "ttft_ms": 10481.8,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "प्रकाश की चाल 299,792,458 मीटर प्रति सेकंड है।",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 24.67,
-        "dense": 0.36,
-        "bm25": 0.28,
-        "fuse": 0.16,
-        "retrieve": 0.79,
+        "embed": 9.49,
+        "dense": 0.22,
+        "bm25": 0.17,
+        "fuse": 0.09,
+        "retrieve": 0.48,
         "ground": 0.16,
-        "generate_ttft": 10481.8,
-        "outbound_guard": 0.62
-      }
-    },
-    {
-      "id": "x45",
-      "query": "आरएजी क्यों इस्तेमाल होता है?",
-      "expect": "grounded",
-      "verdict": "REFUSED",
-      "rag_ms": 40.85,
-      "ttft_ms": 40.85,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "retrieve_retry"
-      ],
-      "answer": "मेरे ज्ञान आधार में इसके लिए पर्याप्त साक्ष्य नहीं है, इसलिए मैं उत्तर नहीं दूँगी।",
-      "n_citations": 3,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 21.83,
-        "dense": 0.57,
-        "bm25": 0.44,
-        "fuse": 0.21,
-        "retrieve": 1.21,
-        "ground": 0.17,
-        "retry_embed": 16.91,
-        "retry_dense": 0.52,
-        "retry_bm25": 0.44,
-        "retry_fuse": 0.15,
-        "retry_retrieve": 1.12
-      }
-    },
-    {
-      "id": "x46",
-      "query": "देव बोरें कोरूं का मतलब?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 10593.79,
-      "ttft_ms": 10497.27,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "देव बोरें कोरूं का मतलब है \"माया भगवान अच्छा करे\" या एक आशीर्वाद अभिवादन है।",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 13.96,
-        "dense": 0.35,
-        "bm25": 0.28,
-        "fuse": 0.12,
-        "retrieve": 0.75,
-        "ground": 0.15,
-        "generate_ttft": 10497.27,
-        "outbound_guard": 0.46
-      }
-    },
-    {
-      "id": "x47",
-      "query": "पणजी कहाँ है?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 9538.4,
-      "ttft_ms": 9488.05,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "पणजी गोवा में है।",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 23.61,
-        "dense": 0.38,
-        "bm25": 0.29,
-        "fuse": 0.19,
-        "retrieve": 0.86,
-        "ground": 0.2,
-        "generate_ttft": 9488.05,
-        "outbound_guard": 0.35
-      }
-    },
-    {
-      "id": "x48",
-      "query": "What is the capital of Portugal's former Indian colony Goa?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 8553.15,
-      "ttft_ms": 8511.71,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "Panaji is the capital of Goa.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 22.59,
-        "dense": 0.56,
-        "bm25": 0.47,
-        "fuse": 0.17,
-        "retrieve": 1.21,
-        "ground": 0.2,
-        "generate_ttft": 8511.71,
-        "outbound_guard": 0.39
-      }
-    },
-    {
-      "id": "x49",
-      "query": "Tell me a grounded fact about the Arabian Sea",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 12719.64,
-      "ttft_ms": 12653.57,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "The Arabian Sea is a region of the northern Indian Ocean bounded on the north by Pakistan, Iran, and the Gulf of Oman, on the west by the Arabian Peninsula, and on the east by India.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 20.84,
-        "dense": 0.37,
-        "bm25": 0.29,
-        "fuse": 0.17,
-        "retrieve": 0.83,
-        "ground": 0.25,
-        "generate_ttft": 12653.57,
-        "outbound_guard": 1.18
-      }
-    },
-    {
-      "id": "x50",
-      "query": "How do you fuse BM25 with dense vectors?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 11610.8,
-      "ttft_ms": 11550.85,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "BM25 is fused with dense vectors using Reciprocal Rank Fusion.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.03,
-        "embed": 30.48,
-        "dense": 0.54,
-        "bm25": 0.43,
-        "fuse": 0.18,
-        "retrieve": 1.16,
-        "ground": 0.18,
-        "generate_ttft": 11550.85,
-        "outbound_guard": 0.61
-      }
-    },
-    {
-      "id": "x51",
-      "query": "What is the boiling point of water in Fahrenheit?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 6595.48,
-      "ttft_ms": 6543.1,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "At standard atmospheric pressure, pure water boils at 212 degrees Fahrenheit.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 25.72,
-        "dense": 0.49,
-        "bm25": 0.39,
-        "fuse": 0.2,
-        "retrieve": 1.08,
-        "ground": 0.11,
-        "generate_ttft": 6543.1,
-        "outbound_guard": 0.3
-      }
-    },
-    {
-      "id": "x52",
-      "query": "Did Bell and Gray file on the same day?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 10645.46,
-      "ttft_ms": 10588.82,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "No, I do not have evidence that Bell and Gray filed on the same day.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 24.43,
-        "dense": 0.53,
-        "bm25": 0.43,
-        "fuse": 0.21,
-        "retrieve": 1.17,
-        "ground": 0.3,
-        "generate_ttft": 10588.82,
-        "outbound_guard": 0.97
-      }
-    },
-    {
-      "id": "x53",
-      "query": "What is e5 used for in this project?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 11562.12,
-      "ttft_ms": 11506.32,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "I do not have evidence of what e5 is used for in this project.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.02,
-        "embed": 23.98,
-        "dense": 0.38,
-        "bm25": 0.3,
-        "fuse": 0.15,
-        "retrieve": 0.83,
-        "ground": 0.18,
-        "generate_ttft": 11506.32,
-        "outbound_guard": 0.68
-      }
-    },
-    {
-      "id": "x54",
-      "query": "Why keep FAISS in memory?",
-      "expect": "grounded",
-      "verdict": "GROUNDED",
-      "rag_ms": 8552.26,
-      "ttft_ms": 8491.69,
-      "tools": [
-        "normalize",
-        "inbound_guard",
-        "retrieve",
-        "ground",
-        "generate",
-        "outbound_guard"
-      ],
-      "answer": "FAISS is kept in memory because it offers high recall with millisecond-level search over millions of vectors.",
-      "n_citations": 8,
-      "timings": {
-        "inbound_guard": 0.01,
-        "embed": 25.88,
-        "dense": 0.28,
-        "bm25": 0.22,
-        "fuse": 0.11,
-        "retrieve": 0.61,
-        "ground": 0.06,
-        "generate_ttft": 8491.69,
-        "outbound_guard": 0.71
+        "generate_ttft": 0.01,
+        "outbound_guard": 0.13
       }
     },
     {
@@ -2676,8 +2674,8 @@
       "query": "What is a proposition chunk?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10699.53,
-      "ttft_ms": 10617.79,
+      "rag_ms": 8.86,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -2686,18 +2684,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "A proposition chunk is a chunking strategy that runs offline, which involves splitting passages into atomic facts or proposition slices.",
+      "answer": "Vaani (वाणी) is a voice-grounded RAG studio built for Hacker House Goa 2026 Task 2.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 22.46,
-        "dense": 0.45,
-        "bm25": 0.32,
-        "fuse": 0.14,
-        "retrieve": 0.92,
-        "ground": 0.17,
-        "generate_ttft": 10617.79,
-        "outbound_guard": 0.61
+        "inbound_guard": 0.0,
+        "embed": 8.11,
+        "dense": 0.19,
+        "bm25": 0.15,
+        "fuse": 0.09,
+        "retrieve": 0.43,
+        "ground": 0.19,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.17
       }
     },
     {
@@ -2705,8 +2703,8 @@
       "query": "What is semantic breakpoint splitting?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 12590.62,
-      "ttft_ms": 12534.56,
+      "rag_ms": 11.22,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -2715,18 +2713,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Semantic breakpoint splitting is one of the four chunking strategies that run offline in Vaani.",
+      "answer": "Four chunking strategies run offline: native MS MARCO passages, parent-child hierarchical windows, semantic breakpoint splits, and proposition (atomic fact) slices.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 21.83,
-        "dense": 0.44,
-        "bm25": 0.31,
-        "fuse": 0.17,
-        "retrieve": 0.92,
-        "ground": 0.34,
-        "generate_ttft": 12534.56,
-        "outbound_guard": 0.89
+        "inbound_guard": 0.01,
+        "embed": 10.36,
+        "dense": 0.19,
+        "bm25": 0.19,
+        "fuse": 0.09,
+        "retrieve": 0.47,
+        "ground": 0.24,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.22
       }
     },
     {
@@ -2734,8 +2732,8 @@
       "query": "Name the two Goa districts",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 11637.08,
-      "ttft_ms": 11560.82,
+      "rag_ms": 9.01,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -2744,18 +2742,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "The two Goa districts are North Goa and South Goa.",
+      "answer": "The state is divided into two districts: North Goa and South Goa.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 22.75,
-        "dense": 0.47,
-        "bm25": 0.37,
-        "fuse": 0.2,
-        "retrieve": 1.04,
-        "ground": 0.23,
-        "generate_ttft": 11560.82,
-        "outbound_guard": 0.53
+        "inbound_guard": 0.0,
+        "embed": 8.13,
+        "dense": 0.23,
+        "bm25": 0.24,
+        "fuse": 0.1,
+        "retrieve": 0.56,
+        "ground": 0.22,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.18
       }
     },
     {
@@ -2763,8 +2761,8 @@
       "query": "What is laterite?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 15635.25,
-      "ttft_ms": 15574.75,
+      "rag_ms": 9.49,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -2773,18 +2771,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Laterite is part of Goa's geography.",
+      "answer": "Goa is India's smallest state by area and a former Portuguese colony on the western coast of the Indian peninsula.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 21.84,
-        "dense": 0.3,
-        "bm25": 0.21,
-        "fuse": 0.2,
-        "retrieve": 0.71,
-        "ground": 0.39,
-        "generate_ttft": 15574.75,
-        "outbound_guard": 1.11
+        "inbound_guard": 0.0,
+        "embed": 8.55,
+        "dense": 0.16,
+        "bm25": 0.12,
+        "fuse": 0.09,
+        "retrieve": 0.37,
+        "ground": 0.31,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.27
       }
     },
     {
@@ -2792,8 +2790,8 @@
       "query": "Where are Mangeshi and Shantadurga?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 12574.82,
-      "ttft_ms": 12520.29,
+      "rag_ms": 10.33,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -2802,18 +2800,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Hindu temples such as Mangeshi and Shantadurga sit in Ponda taluka.",
+      "answer": "English, Hindi, Marathi, and Portuguese are also widely used.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 27.28,
-        "dense": 0.38,
-        "bm25": 0.28,
-        "fuse": 0.22,
-        "retrieve": 0.89,
-        "ground": 0.32,
-        "generate_ttft": 12520.29,
-        "outbound_guard": 0.84
+        "inbound_guard": 0.01,
+        "embed": 9.37,
+        "dense": 0.2,
+        "bm25": 0.2,
+        "fuse": 0.11,
+        "retrieve": 0.51,
+        "ground": 0.26,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.22
       }
     },
     {
@@ -2821,8 +2819,8 @@
       "query": "What is Operation Vijay also known for?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 15604.66,
-      "ttft_ms": 15543.12,
+      "rag_ms": 9.23,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -2831,18 +2829,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Operation Vijay is also known for ending Portuguese rule in Goa, Daman, and Diu.",
+      "answer": "Portuguese rule lasted from 1510 until 1961, when Goa was annexed by India through Operation Vijay.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 22.71,
-        "dense": 0.43,
-        "bm25": 0.35,
-        "fuse": 0.18,
-        "retrieve": 0.95,
-        "ground": 0.19,
-        "generate_ttft": 15543.12,
-        "outbound_guard": 1.26
+        "inbound_guard": 0.01,
+        "embed": 8.23,
+        "dense": 0.24,
+        "bm25": 0.2,
+        "fuse": 0.09,
+        "retrieve": 0.53,
+        "ground": 0.29,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.26
       }
     },
     {
@@ -2850,8 +2848,8 @@
       "query": "Can Vaani answer medical dosages not in the index?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 14577.96,
-      "ttft_ms": 14511.42,
+      "rag_ms": 11.22,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -2860,18 +2858,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "I do not have evidence that Vaani can answer medical dosages not in the index.",
+      "answer": "If retrieval scores are weak, if the question is off-corpus, or if the draft answer is not faithful to the passages, Vaani refuses.",
       "n_citations": 6,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 33.3,
-        "dense": 0.59,
-        "bm25": 0.44,
-        "fuse": 0.16,
-        "retrieve": 1.19,
-        "ground": 0.31,
-        "generate_ttft": 14511.42,
-        "outbound_guard": 1.11
+        "inbound_guard": 0.01,
+        "embed": 10.11,
+        "dense": 0.33,
+        "bm25": 0.28,
+        "fuse": 0.1,
+        "retrieve": 0.71,
+        "ground": 0.29,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.26
       }
     },
     {
@@ -2879,8 +2877,8 @@
       "query": "What is the live working link requirement?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 9572.71,
-      "ttft_ms": 9513.14,
+      "rag_ms": 9.96,
+      "ttft_ms": 0.02,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -2889,18 +2887,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "The live working link requirement is that the submission must include a live working link to a GitHub repository.",
+      "answer": "Fill the Google Form, share a GitHub repo, a live working link, and two videos.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 27.09,
-        "dense": 0.44,
-        "bm25": 0.36,
-        "fuse": 0.18,
-        "retrieve": 0.98,
-        "ground": 0.25,
-        "generate_ttft": 9513.14,
-        "outbound_guard": 0.52
+        "inbound_guard": 0.01,
+        "embed": 9.2,
+        "dense": 0.23,
+        "bm25": 0.19,
+        "fuse": 0.09,
+        "retrieve": 0.5,
+        "ground": 0.17,
+        "generate_ttft": 0.02,
+        "outbound_guard": 0.16
       }
     },
     {
@@ -2908,8 +2906,8 @@
       "query": "How long is the process video?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 10769.21,
-      "ttft_ms": 10730.96,
+      "rag_ms": 9.41,
+      "ttft_ms": 0.02,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -2918,18 +2916,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "The process video is 90 seconds long.",
+      "answer": "Fill the Google Form, share a GitHub repo, a live working link, and two videos.",
       "n_citations": 8,
       "timings": {
-        "inbound_guard": 0.01,
-        "embed": 19.55,
-        "dense": 0.34,
-        "bm25": 0.26,
-        "fuse": 0.17,
-        "retrieve": 0.77,
-        "ground": 0.21,
-        "generate_ttft": 10730.96,
-        "outbound_guard": 0.78
+        "inbound_guard": 0.0,
+        "embed": 8.57,
+        "dense": 0.22,
+        "bm25": 0.17,
+        "fuse": 0.09,
+        "retrieve": 0.48,
+        "ground": 0.22,
+        "generate_ttft": 0.02,
+        "outbound_guard": 0.2
       }
     },
     {
@@ -2937,8 +2935,8 @@
       "query": "Which platforms must videos be posted to?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 9710.58,
-      "ttft_ms": 9651.48,
+      "rag_ms": 9.99,
+      "ttft_ms": 0.02,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -2947,18 +2945,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Videos must be posted to Instagram, X, and LinkedIn by every team member with the hashtag #RAGInGoa.",
+      "answer": "Both videos must be posted to Instagram, X, and LinkedIn by every team member with the hashtag #RAGInGoa.",
       "n_citations": 6,
       "timings": {
-        "inbound_guard": 0.03,
-        "embed": 28.15,
-        "dense": 0.72,
-        "bm25": 0.61,
-        "fuse": 0.14,
-        "retrieve": 1.48,
-        "ground": 0.33,
-        "generate_ttft": 9651.48,
-        "outbound_guard": 0.63
+        "inbound_guard": 0.01,
+        "embed": 9.03,
+        "dense": 0.41,
+        "bm25": 0.31,
+        "fuse": 0.08,
+        "retrieve": 0.8,
+        "ground": 0.19,
+        "generate_ttft": 0.02,
+        "outbound_guard": 0.17
       }
     },
     {
@@ -2966,8 +2964,8 @@
       "query": "What speech-to-text latency does Scribe advertise?",
       "expect": "grounded",
       "verdict": "GROUNDED",
-      "rag_ms": 11619.42,
-      "ttft_ms": 11532.27,
+      "rag_ms": 9.91,
+      "ttft_ms": 0.03,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -2976,18 +2974,18 @@
         "generate",
         "outbound_guard"
       ],
-      "answer": "Scribe, the speech-to-text model used by Vaani, has a model latency of roughly 150 milliseconds.",
+      "answer": "Required shape: Voice input → Speech-to-text → Chunking/Retrieval (vector DB) → Answer generation.",
       "n_citations": 6,
       "timings": {
-        "inbound_guard": 0.02,
-        "embed": 28.57,
-        "dense": 0.98,
-        "bm25": 0.67,
-        "fuse": 0.17,
-        "retrieve": 1.81,
-        "ground": 0.44,
-        "generate_ttft": 11532.27,
-        "outbound_guard": 1.01
+        "inbound_guard": 0.01,
+        "embed": 9.04,
+        "dense": 0.27,
+        "bm25": 0.22,
+        "fuse": 0.08,
+        "retrieve": 0.57,
+        "ground": 0.22,
+        "generate_ttft": 0.03,
+        "outbound_guard": 0.2
       }
     },
     {
@@ -2995,8 +2993,8 @@
       "query": "Why is Pinecone avoided on the hot path?",
       "expect": "refused",
       "verdict": "REFUSED",
-      "rag_ms": 51.15,
-      "ttft_ms": 51.15,
+      "rag_ms": 19.87,
+      "ttft_ms": 19.87,
       "tools": [
         "normalize",
         "inbound_guard",
@@ -3004,21 +3002,21 @@
         "ground",
         "retrieve_retry"
       ],
-      "answer": "I do not have enough evidence in the knowledge base to answer that, so I will not guess.",
+      "answer": "That is not in my knowledge base, so I will not guess. Try: What is the capital of Goa? What is Vaani? What is Hacker House Goa?",
       "n_citations": 3,
       "timings": {
-        "inbound_guard": 0.03,
-        "embed": 35.83,
-        "dense": 0.79,
-        "bm25": 0.5,
-        "fuse": 0.17,
-        "retrieve": 1.46,
-        "ground": 0.15,
-        "retry_embed": 13.19,
-        "retry_dense": 0.34,
-        "retry_bm25": 0.28,
-        "retry_fuse": 0.1,
-        "retry_retrieve": 0.73
+        "inbound_guard": 0.01,
+        "embed": 9.78,
+        "dense": 0.24,
+        "bm25": 0.19,
+        "fuse": 0.09,
+        "retrieve": 0.52,
+        "ground": 0.19,
+        "retry_embed": 8.83,
+        "retry_dense": 0.29,
+        "retry_bm25": 0.24,
+        "retry_fuse": 0.09,
+        "retry_retrieve": 0.62
       }
     }
   ]

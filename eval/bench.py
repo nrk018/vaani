@@ -106,9 +106,14 @@ def pack(values: list[float]) -> dict:
 
 
 def main() -> None:
+    from app.harness import warm_generate
+
     store.load_or_build()
+    warm_generate()
     queries = load_queries()
-    print(f"bench n={len(queries)}")
+    print(f"bench n={len(queries)} warmup=8")
+    for q in queries[:8]:
+        run_ask(q["query"])
     rows = []
     t0 = time.perf_counter()
     for q in queries:

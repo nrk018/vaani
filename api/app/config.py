@@ -19,7 +19,9 @@ class Settings(BaseSettings):
     elevenlabs_tts_model: str = "eleven_flash_v2_5"
 
     groq_api_key: str = ""
-    groq_model: str = "llama-3.1-8b-instant"
+    groq_model: str = "openai/gpt-oss-20b"
+    groq_max_tokens: int = 48
+    generate_deadline_ms: float = 120.0
 
     hf_token: str = ""
 

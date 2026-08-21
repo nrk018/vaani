@@ -23,6 +23,9 @@ from app.models import AskRequest, HealthResponse, SpeakRequest
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     store.load_or_build()
+    from app.harness import warm_generate
+
+    warm_generate()
     yield
 
 
@@ -30,7 +33,7 @@ app = FastAPI(title="Vaani", version="0.1.0", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.origin_list + ["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )

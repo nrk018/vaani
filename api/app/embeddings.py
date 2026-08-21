@@ -57,10 +57,17 @@ class Embedder:
         try:
             from sentence_transformers import SentenceTransformer
 
-            model = SentenceTransformer(
-                "intfloat/multilingual-e5-small",
-                device="cpu",
-            )
+            try:
+                model = SentenceTransformer(
+                    "intfloat/multilingual-e5-small",
+                    device="cpu",
+                    local_files_only=True,
+                )
+            except Exception:
+                model = SentenceTransformer(
+                    "intfloat/multilingual-e5-small",
+                    device="cpu",
+                )
             self._model = model
             self.name = "intfloat/multilingual-e5-small"
         except Exception:
