@@ -16,7 +16,7 @@ export function Waveform({
         return (
           <span
             key={i}
-            className="w-[3px] rounded-full bg-gradient-to-t from-teal-700/40 to-gold/90 transition-[height] duration-150"
+            className="w-[3px] rounded-full bg-gradient-to-t from-[#4A90E2]/50 to-[#FFB3D9] transition-[height] duration-150"
             style={{ height: `${Math.min(40, h)}px`, opacity: active ? 1 : 0.35 }}
           />
         );

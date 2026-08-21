@@ -25,11 +25,10 @@ export function VoiceStage() {
       <ConversationRail turns={v.turns} partial={v.partial} />
 
       <section className="relative flex min-h-[70vh] flex-col items-center justify-center px-4 pb-16 pt-20">
-        <div className="relative flex h-[min(520px,70vw)] w-[min(520px,70vw)] items-center justify-center">
-          <Constellation citations={v.lastResult?.citations ?? []} />
+        <div className="relative flex h-[min(420px,58vw)] w-[min(340px,70vw)] items-center justify-center">
           <button
             type="button"
-            className="relative z-10 w-[min(420px,72%)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60"
+            className="relative z-10 w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60"
             onClick={() => {
               if (!listening) void v.startListening();
               else v.stopListening();
@@ -39,6 +38,7 @@ export function VoiceStage() {
             <MeshGradientSVG state={v.state} energy={v.energy} />
           </button>
         </div>
+        <Constellation citations={v.lastResult?.citations ?? []} />
 
         <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.32em] text-gold/80">
           {HINT[v.state]}
@@ -63,11 +63,11 @@ export function VoiceStage() {
             value={v.draft}
             onChange={(e) => v.setDraft(e.target.value)}
             placeholder="Try: What is the capital of Goa?"
-            className="h-11 flex-1 rounded-full border border-white/10 bg-white/5 px-4 text-sm text-white outline-none placeholder:text-white/30 focus:border-gold/50"
+            className="h-11 flex-1 rounded-full border border-gold/20 bg-white/5 px-4 text-sm text-white outline-none placeholder:text-white/30 focus:border-sea/60"
           />
           <Button
             type="submit"
-            className="h-11 rounded-full bg-gold px-5 text-black hover:bg-gold/90"
+            className="h-11 rounded-full bg-gold px-5 text-[#1A1A2E] hover:bg-gold/90"
           >
             Ask
           </Button>
@@ -75,7 +75,7 @@ export function VoiceStage() {
             type="button"
             size="icon"
             variant="ghost"
-            className="h-11 w-11 rounded-full border border-white/15 text-white hover:bg-white/10"
+            className="h-11 w-11 rounded-full border border-gold/25 text-white hover:bg-gold/10"
             onClick={() => (listening ? v.stopListening() : v.startListening())}
           >
             {listening ? <Square className="size-4" /> : <Mic className="size-4" />}
@@ -105,7 +105,7 @@ export function VoiceStage() {
             <button
               key={q}
               type="button"
-              className="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-white/45 hover:border-gold/40 hover:text-gold"
+              className="rounded-full border border-gold/20 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-white/55 hover:border-sea/50 hover:text-sea"
               onClick={() => void v.runQuery(q)}
             >
               {q}

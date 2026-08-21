@@ -97,8 +97,12 @@ export function MeshGradientSVG({
         </foreignObject>
 
         <motion.ellipse
-          rx="20"
+          cx={80}
+          cy={120}
+          rx={20}
+          ry={30}
           fill="#1A1A2E"
+          initial={false}
           animate={{
             cx: 80 + eyeOffset.x,
             cy: 120 + eyeOffset.y,
@@ -116,8 +120,12 @@ export function MeshGradientSVG({
           }}
         />
         <motion.ellipse
-          rx="20"
+          cx={150}
+          cy={120}
+          rx={20}
+          ry={30}
           fill="#1A1A2E"
+          initial={false}
           animate={{
             cx: 150 + eyeOffset.x,
             cy: 120 + eyeOffset.y,
