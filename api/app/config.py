@@ -15,9 +15,9 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=(".env", "../.env"), extra="ignore")
 
     elevenlabs_api_key: str = ""
-    # Benne — conversational South Indian male (no Goan/Konkani voice in the library).
-    elevenlabs_voice_id: str = "Cjxf7lo0ZVGyj0CtWa8q"
-    elevenlabs_tts_model: str = "eleven_flash_v2_5"
+    # Brian — deep, clear premade narrator. Flash + community voices sounded robotic.
+    elevenlabs_voice_id: str = "nPczCjzI2devNBz1zQrb"
+    elevenlabs_tts_model: str = "eleven_multilingual_v2"
 
     groq_api_key: str = ""
     groq_model: str = "openai/gpt-oss-20b"
