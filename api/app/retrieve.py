@@ -23,6 +23,16 @@ def detect_script(query: str) -> str:
     return "latin"
 
 
+def expand_query(query: str) -> str:
+    """Light lexical expansion so MSMARCO matches MS MARCO."""
+    extra: list[str] = []
+    if re.search(r"msmarco|ms[\s-]?marco", query, re.I):
+        extra.extend(["MS MARCO", "MSMARCO", "Microsoft"])
+    if extra:
+        return query + " " + " ".join(extra)
+    return query
+
+
 def route_weights(query: str) -> dict[str, float]:
     q = query.lower()
     n = len(query.split())
@@ -39,6 +49,9 @@ def route_weights(query: str) -> dict[str, float]:
         weights["semantic"] = 1.15
     if "goa" in q or "konkani" in q or "vaani" in q or "hh " in q:
         weights["native"] = 1.2
+    if "marco" in q or "msmarco" in q:
+        weights["native"] = 1.4
+        weights["proposition"] = 1.25
     return weights
 
 
@@ -101,8 +114,9 @@ def bm25_search(query: str, k: int) -> list[tuple[int, float]]:
 
 def retrieve(query: str) -> tuple[list[Citation], dict[str, float]]:
     timings: dict[str, float] = {}
+    search_q = expand_query(query)
     script = detect_script(query)
-    weights = route_weights(query)
+    weights = route_weights(search_q)
 
     t0 = time.perf_counter()
     index_embedder = str(store.manifest.get("embedder") or store.embedder.name)
@@ -113,7 +127,7 @@ def retrieve(query: str) -> tuple[list[Citation], dict[str, float]]:
             and index_embedder.startswith("hash")
         )
     )
-    qvec = store.embedder.encode_query(query) if dense_compatible else np.zeros((1, 384), dtype=np.float32)
+    qvec = store.embedder.encode_query(search_q) if dense_compatible else np.zeros((1, 384), dtype=np.float32)
     timings["embed"] = (time.perf_counter() - t0) * 1000
 
     def _dense():
@@ -125,7 +139,7 @@ def retrieve(query: str) -> tuple[list[Citation], dict[str, float]]:
 
     def _bm25():
         t = time.perf_counter()
-        hits = bm25_search(query, settings.bm25_k)
+        hits = bm25_search(search_q, settings.bm25_k)
         return hits, (time.perf_counter() - t) * 1000
 
     dense_f = _pool.submit(_dense)

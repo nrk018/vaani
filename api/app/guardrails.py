@@ -57,6 +57,11 @@ def query_coverage(query: str, citations: list[Citation]) -> float:
     overlap = len(q & ctx)
     if overlap == 0:
         return 0.0
+    # XI titles are the original MS MARCO query. If the user asked that
+    # question (or close), treat it as in-corpus even when the body paraphrases.
+    titles = token_set(" ".join(c.title for c in citations[:4]))
+    if titles and len(q & titles) / len(q) >= 0.45:
+        return 1.0
     # Short questions: one real content word in the passages is enough.
     if len(q) <= 6:
         return max(overlap / len(q), 0.5)

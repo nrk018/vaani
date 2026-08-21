@@ -154,30 +154,31 @@ export function useVaani() {
       try {
         const result = await askStream(
           q,
-          (tok) => {
+          (tok, info) => {
             setTurns((prev) =>
               prev.map((turn) =>
                 turn.id === vaaniId
-                  ? { ...turn, text: turn.text + tok }
+                  ? {
+                      ...turn,
+                      text: info?.replace ? tok : turn.text + tok,
+                    }
                   : turn,
               ),
             );
           },
           (meta) => {
-            if (meta.citations) {
-              setLastResult((cur) => ({
-                answer: cur?.answer ?? "",
-                verdict: meta.verdict ?? cur?.verdict ?? "GROUNDED",
-                language: meta.language ?? cur?.language ?? "en",
-                citations: meta.citations!,
-                timings: meta.timings ?? cur?.timings ?? [],
-                rag_ms: meta.rag_ms ?? cur?.rag_ms ?? 0,
-                ttft_ms: meta.ttft_ms ?? cur?.ttft_ms ?? null,
-                refuse_reason: meta.refuse_reason ?? null,
-                tools: meta.tools ?? cur?.tools ?? [],
-                model: meta.model ?? cur?.model ?? "",
-              }));
-            }
+            setLastResult((cur) => ({
+              answer: meta.answer ?? cur?.answer ?? "",
+              verdict: meta.verdict ?? cur?.verdict ?? "GROUNDED",
+              language: meta.language ?? cur?.language ?? "en",
+              citations: meta.citations ?? cur?.citations ?? [],
+              timings: meta.timings ?? cur?.timings ?? [],
+              rag_ms: meta.rag_ms ?? cur?.rag_ms ?? 0,
+              ttft_ms: meta.ttft_ms ?? cur?.ttft_ms ?? null,
+              refuse_reason: meta.refuse_reason ?? cur?.refuse_reason ?? null,
+              tools: meta.tools ?? cur?.tools ?? [],
+              model: meta.model ?? cur?.model ?? "",
+            }));
           },
         );
         setLastResult(result);

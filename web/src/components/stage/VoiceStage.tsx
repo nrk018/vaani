@@ -1,9 +1,10 @@
 "use client";
 
-import { Mic, Square } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Mic, Square, X } from "lucide-react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { useVaani } from "@/hooks/useVaani";
-import { Constellation } from "./Constellation";
 import { ConversationRail } from "./ConversationRail";
 import { LatencyHud } from "./LatencyHud";
 import { MeshGradientSVG } from "./MeshGradientSVG";
@@ -16,105 +17,234 @@ const HINT: Record<string, string> = {
   speaking: "Speaking from the passages",
 };
 
+type Panel = "log" | "instrument" | null;
+
 export function VoiceStage() {
   const v = useVaani();
   const listening = v.state === "listening";
+  const [panel, setPanel] = useState<Panel>(null);
+
+  const latest = [...v.turns].reverse().find((t) => t.role === "vaani");
+  const caption =
+    v.partial ||
+    latest?.text ||
+    (v.state === "thinking" ? "Retrieving evidence…" : "");
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setPanel(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   return (
-    <div className="grid min-h-screen grid-cols-1 md:grid-cols-[280px_1fr_260px]">
-      <ConversationRail turns={v.turns} partial={v.partial} />
-
-      <section className="relative flex min-h-[70vh] flex-col items-center justify-center px-4 pb-16 pt-20">
-        <div className="relative flex h-[min(420px,58vw)] w-[min(340px,70vw)] items-center justify-center">
-          <button
-            type="button"
-            className="relative z-10 w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60"
-            onClick={() => {
-              if (!listening) void v.startListening();
-              else v.stopListening();
-            }}
-            aria-label={listening ? "Stop listening" : "Start listening"}
-          >
-            <MeshGradientSVG state={v.state} energy={v.energy} />
-          </button>
-        </div>
-        <Constellation citations={v.lastResult?.citations ?? []} />
-
-        <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.32em] text-gold/80">
+    <div className="relative min-h-screen">
+      <section className="absolute inset-x-0 top-0 bottom-[14.5rem] flex flex-col items-center justify-center px-4">
+        <button
+          type="button"
+          className="relative z-10 w-[min(340px,70vw)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60"
+          onClick={() => {
+            if (!listening) void v.startListening();
+            else v.stopListening();
+          }}
+          aria-label={listening ? "Stop listening" : "Start listening"}
+        >
+          <MeshGradientSVG state={v.state} energy={v.energy} />
+        </button>
+        <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.32em] text-gold/80">
           {HINT[v.state]}
         </p>
-        <div className="mt-4 w-full max-w-md">
-          <Waveform active={listening || v.state === "speaking"} energy={v.energy} />
-        </div>
-        {v.turns.at(-1)?.role === "vaani" && v.turns.at(-1)?.text ? (
-          <p className="mt-6 max-w-xl text-center font-serif text-2xl leading-snug text-white/90 md:text-3xl">
-            {v.turns.at(-1)?.text}
-          </p>
-        ) : null}
-
-        <form
-          className="mt-8 flex w-full max-w-lg gap-2"
-          onSubmit={(e) => {
-            e.preventDefault();
-            void v.runQuery(v.draft);
-          }}
-        >
-          <input
-            value={v.draft}
-            onChange={(e) => v.setDraft(e.target.value)}
-            placeholder="Try: What is the capital of Goa?"
-            className="h-11 flex-1 rounded-full border border-gold/20 bg-white/5 px-4 text-sm text-white outline-none placeholder:text-white/30 focus:border-sea/60"
-          />
-          <Button
-            type="submit"
-            className="h-11 rounded-full bg-gold px-5 text-[#1A1A2E] hover:bg-gold/90"
-          >
-            Ask
-          </Button>
-          <Button
-            type="button"
-            size="icon"
-            variant="ghost"
-            className="h-11 w-11 rounded-full border border-gold/25 text-white hover:bg-gold/10"
-            onClick={() => (listening ? v.stopListening() : v.startListening())}
-          >
-            {listening ? <Square className="size-4" /> : <Mic className="size-4" />}
-          </Button>
-        </form>
-        {v.error ? (
-          <p className="mt-3 text-xs text-laterite">{v.error}</p>
-        ) : null}
-        {v.health ? (
-          <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/30">
-            {v.health.index.n_chunks} chunks · {v.health.index.embedder} ·{" "}
-            {v.health.elevenlabs ? "scribe live" : "voice optional"} ·{" "}
-            {v.health.groq ? "groq" : "extractive"}
-          </p>
-        ) : (
-          <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/30">
-            API offline — start the FastAPI server
-          </p>
-        )}
-        <div className="mt-5 flex max-w-lg flex-wrap justify-center gap-2">
-          {[
-            "What is the capital of Goa?",
-            "What is Vaani?",
-            "What is Hacker House Goa?",
-            "गोवा की राजधानी क्या है?",
-          ].map((q) => (
-            <button
-              key={q}
-              type="button"
-              className="rounded-full border border-gold/20 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-white/55 hover:border-sea/50 hover:text-sea"
-              onClick={() => void v.runQuery(q)}
-            >
-              {q}
-            </button>
-          ))}
-        </div>
       </section>
 
-      <LatencyHud result={v.lastResult} />
+      <EdgeTab
+        side="left"
+        label="log"
+        open={panel === "log"}
+        onClick={() => setPanel(panel === "log" ? null : "log")}
+      />
+      <EdgeTab
+        side="right"
+        label="instrument"
+        open={panel === "instrument"}
+        onClick={() => setPanel(panel === "instrument" ? null : "instrument")}
+      />
+
+      <AnimatePresence>
+        {panel ? (
+          <motion.button
+            type="button"
+            aria-label="Close panel"
+            className="fixed inset-0 z-40 bg-black/45"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setPanel(null)}
+          />
+        ) : null}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {panel === "log" ? (
+          <motion.aside
+            key="log"
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ type: "spring", stiffness: 380, damping: 36 }}
+            className="fixed inset-y-0 left-0 z-50 flex w-[min(20rem,88vw)] flex-col border-r border-white/10 bg-[#12101c]/95 backdrop-blur-md"
+          >
+            <DrawerClose onClick={() => setPanel(null)} />
+            <ConversationRail turns={v.turns} partial={v.partial} />
+          </motion.aside>
+        ) : null}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {panel === "instrument" ? (
+          <motion.aside
+            key="instrument"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 380, damping: 36 }}
+            className="fixed inset-y-0 right-0 z-50 flex w-[min(20rem,88vw)] flex-col border-l border-white/10 bg-[#12101c]/95 backdrop-blur-md"
+          >
+            <DrawerClose onClick={() => setPanel(null)} />
+            <LatencyHud
+              result={v.lastResult}
+              citations={v.lastResult?.citations ?? []}
+            />
+          </motion.aside>
+        ) : null}
+      </AnimatePresence>
+
+      <div className="fixed inset-x-0 bottom-0 z-30">
+        <div className="mx-auto flex w-full max-w-2xl flex-col items-center px-4 pb-2 pt-2">
+          <div className="mb-2 flex min-h-[4.75rem] w-full items-end justify-center">
+            <AnimatePresence mode="wait">
+              {caption ? (
+                <motion.p
+                  key={latest?.id ?? (v.partial ? "partial" : v.state)}
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                  className="line-clamp-3 max-w-xl text-center font-serif text-xl leading-snug text-white/90 md:text-2xl"
+                >
+                  {caption}
+                </motion.p>
+              ) : (
+                <motion.span
+                  key="empty"
+                  className="block h-[4.75rem]"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0 }}
+                />
+              )}
+            </AnimatePresence>
+          </div>
+
+          <form
+            className="flex w-full gap-2"
+            onSubmit={(e) => {
+              e.preventDefault();
+              void v.runQuery(v.draft);
+            }}
+          >
+            <input
+              value={v.draft}
+              onChange={(e) => v.setDraft(e.target.value)}
+              placeholder="Try: What is the capital of Goa?"
+              className="h-11 flex-1 rounded-full border border-gold/20 bg-[#1A1A2E]/80 px-4 text-sm text-white outline-none placeholder:text-white/30 focus:border-sea/60"
+            />
+            <Button
+              type="submit"
+              className="h-11 rounded-full bg-gold px-5 text-[#1A1A2E] hover:bg-gold/90"
+            >
+              Ask
+            </Button>
+            <Button
+              type="button"
+              size="icon"
+              variant="ghost"
+              className="h-11 w-11 rounded-full border border-gold/25 text-white hover:bg-gold/10"
+              onClick={() =>
+                listening ? v.stopListening() : v.startListening()
+              }
+            >
+              {listening ? (
+                <Square className="size-4" />
+              ) : (
+                <Mic className="size-4" />
+              )}
+            </Button>
+          </form>
+
+          {v.error ? (
+            <p className="mt-2 text-xs text-laterite">{v.error}</p>
+          ) : null}
+        </div>
+
+        <div className="relative">
+          <Waveform
+            variant="dock"
+            active={listening || v.state === "speaking"}
+            energy={v.energy}
+          />
+          <p className="pointer-events-none absolute inset-x-0 bottom-1 text-center font-mono text-[9px] uppercase tracking-[0.2em] text-white/35 md:text-right md:pr-4">
+            {v.health
+              ? `${v.health.index.n_chunks} chunks · ${v.health.index.embedder} · ${
+                  v.health.elevenlabs ? "scribe live" : "voice optional"
+                } · ${v.health.groq ? "groq" : "extractive"}`
+              : "API offline — start the FastAPI server"}
+          </p>
+        </div>
+      </div>
     </div>
+  );
+}
+
+function EdgeTab({
+  side,
+  label,
+  open,
+  onClick,
+  icon,
+}: {
+  side: "left" | "right";
+  label: string;
+  open: boolean;
+  onClick: () => void;
+  icon?: ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-expanded={open}
+      className={`fixed top-1/2 z-40 flex -translate-y-1/2 items-center gap-2 border border-white/10 bg-[#1A1A2E]/80 px-2 py-3 font-mono text-[9px] uppercase tracking-[0.22em] text-white/70 backdrop-blur-md transition hover:text-gold ${
+        side === "left"
+          ? "left-0 rounded-r-xl border-l-0"
+          : "right-0 rounded-l-xl border-r-0"
+      } ${open ? "opacity-0" : "opacity-100"}`}
+      style={{ writingMode: "vertical-rl" }}
+    >
+      {icon}
+      {label}
+    </button>
+  );
+}
+
+function DrawerClose({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="absolute right-3 top-4 z-10 rounded-full p-1 text-white/45 hover:text-white"
+      aria-label="Close"
+    >
+      <X className="size-4" />
+    </button>
   );
 }

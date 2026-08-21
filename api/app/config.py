@@ -20,8 +20,10 @@ class Settings(BaseSettings):
 
     groq_api_key: str = ""
     groq_model: str = "openai/gpt-oss-20b"
-    groq_max_tokens: int = 48
+    groq_max_tokens: int = 256
     generate_deadline_ms: float = 120.0
+    # Background fluent rewrite. Not on the scored 200ms clock.
+    groq_rewrite_timeout_ms: float = 4000.0
 
     hf_token: str = ""
 

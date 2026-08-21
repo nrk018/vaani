@@ -16,6 +16,11 @@ export type NodeTiming = {
   ms: number;
 };
 
+export type TokenInfo = {
+  replace?: boolean;
+  source?: "extractive" | "groq" | string;
+};
+
 export type AskResult = {
   answer: string;
   verdict: GuardVerdict;

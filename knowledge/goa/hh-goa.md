@@ -8,7 +8,7 @@ Builders must ship an end-to-end pipeline: a user speaks a question, speech is t
 
 Required shape: Voice input → Speech-to-text → Chunking/Retrieval (vector DB) → Answer generation.
 
-The dataset for the RAG pipeline is ai4bharat/MSMARCO-XI on Hugging Face — MS MARCO translated into Indic languages.
+The dataset for the RAG pipeline is ai4bharat/MSMARCO-XI on Hugging Face — an Indic-language translation of MS MARCO. The original MS MARCO dataset (also written MSMARCO) was created by Microsoft from Bing search queries.
 
 Speech-to-text must use either Sarvam or ElevenLabs. Vaani uses ElevenLabs Scribe v2 Realtime.
 

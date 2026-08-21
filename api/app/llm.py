@@ -12,5 +12,6 @@ def groq_client() -> Groq | None:
     if not settings.groq_api_key:
         return None
     if _client is None:
-        _client = Groq(api_key=settings.groq_api_key, timeout=2.0)
+        # Rewrite runs off the 200ms clock; 2s was cutting Groq mid-sentence.
+        _client = Groq(api_key=settings.groq_api_key, timeout=8.0)
     return _client

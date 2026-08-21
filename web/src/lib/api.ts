@@ -1,4 +1,4 @@
-import type { AskResult, Health, MetricsSnapshot } from "./types";
+import type { AskResult, Health, MetricsSnapshot, TokenInfo } from "./types";
 
 export const API =
   typeof window === "undefined"
@@ -8,7 +8,7 @@ export const API =
 async function parseSseAsk(
   query: string,
   language: string | undefined,
-  onToken: (t: string) => void,
+  onToken: (t: string, info?: TokenInfo) => void,
   onMeta: (m: Partial<AskResult>) => void,
 ): Promise<AskResult> {
   const res = await fetch(`${API}/v1/ask`, {
@@ -41,8 +41,19 @@ async function parseSseAsk(
       if (!dataLine) continue;
       const data = JSON.parse(dataLine);
       if (event === "token") {
-        answer += data.text || "";
-        onToken(data.text || "");
+        const text = data.text || "";
+        const info: TokenInfo = {
+          replace: Boolean(data.replace),
+          source: data.source,
+        };
+        answer = info.replace ? text : answer + text;
+        onToken(text, info);
+      } else if (event === "ttft") {
+        onMeta({
+          ttft_ms: data.ms,
+          rag_ms: data.rag_ms,
+          model: data.model,
+        });
       } else if (event === "meta") {
         onMeta(data);
       } else if (event === "done") {
@@ -68,7 +79,7 @@ async function parseSseAsk(
 
 export async function askStream(
   query: string,
-  onToken: (t: string) => void,
+  onToken: (t: string, info?: TokenInfo) => void,
   onMeta: (m: Partial<AskResult>) => void,
   language?: string,
 ): Promise<AskResult> {

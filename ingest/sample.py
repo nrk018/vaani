@@ -138,10 +138,10 @@ def sample_msmarco_xi(
     max_rows: int = 4000,
     prefer_selected: bool = True,
 ) -> list[dict]:
-    """Stream a latency-safe slice of MSMARCO-XI.
+    """Stream a slice of MSMARCO-XI (hi/mr validation).
 
-    Full dump is ~10M rows — do not index it. Selected passages plus a
-    stratified remainder is enough to show real Indic RAG.
+    Full dump is ~11M rows / 55GB — do not index it. `max_rows` is a
+    query budget split across languages (selected passages only).
     """
     try:
         from datasets import load_dataset  # noqa: F401
@@ -163,6 +163,7 @@ def sample_msmarco_xi(
             english = list(passages.get("English_passages") or [])
             translated = list(passages.get("Translated_passages") or [])
             qid = row.get("query_id")
+            qtext = (row.get("Eng_Query") or row.get("query") or "").strip()
             for i, (en, tr) in enumerate(zip(english, translated)):
                 is_sel = bool(selected[i]) if i < len(selected) else False
                 if prefer_selected and not is_sel:
@@ -175,25 +176,24 @@ def sample_msmarco_xi(
                     if key in seen:
                         continue
                     seen.add(key)
+                    body = text if not qtext else f"{qtext}\n{text}"
                     out.append(
                         {
                             "id": f"xi-{lang}-{qid}-{i}-{lang_code}",
                             "lang": lang_code,
                             "query_type": qtype,
-                            "title": (row.get("Eng_Query") or row.get("query") or "")[:80],
-                            "text": text,
+                            "title": qtext[:80] or "msmarco-xi",
+                            "text": body,
                             "source": "msmarco-xi",
                             "is_selected": is_sel,
                         }
                     )
             taken += 1
-            if taken % 50 == 0:
+            if taken % 100 == 0:
                 print(f"  {lang}: {taken}/{per_lang} queries → {len(out)} passages", flush=True)
-            if taken >= per_lang or len(out) >= max_rows:
+            if taken >= per_lang:
                 break
         print(f"  {lang} done: {taken} queries, {len(out)} passages so far", flush=True)
-        if len(out) >= max_rows:
-            return out
     return out
 
 

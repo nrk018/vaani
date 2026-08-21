@@ -70,7 +70,7 @@ Not a single naive fixed-size split. Four strategies over the same corpus (`inge
 | semantic | sentence groups with overlap |
 | proposition | atomic claim slices for factoids |
 
-Retrieve is hybrid dense + BM25, RRF, then parent expand. `make ingest-xi` samples MSMARCO-XI (`hi`, `mr`).
+Retrieve is hybrid dense + BM25, RRF, then parent expand. `make ingest-xi` samples MSMARCO-XI Hindi and Marathi **validation** queries (default 8000, selected passages only — not the 11M-row train dump).
 
 ### 3. Latency target
 
@@ -132,7 +132,8 @@ make web             # Next.js :3000
 Open [http://localhost:3000](http://localhost:3000). Type if you do not have Scribe keys: *What is the capital of Goa?* / *भारत की राजधानी क्या है?*
 
 ```bash
-make ingest-xi       # + MSMARCO-XI hi,mr sample (needs Hugging Face)
+make ingest-xi       # MSMARCO-XI hi,mr validation sample (~8k queries)
+make ingest-xi-all   # ALL hi+mr validation queries (~98k unique MS MARCO eval questions; slow)
 ```
 
 ## Repo

@@ -12,7 +12,7 @@ export function ConversationRail({
   partial: string;
 }) {
   return (
-    <aside className="flex h-full flex-col border-white/8 bg-black/20 backdrop-blur-md md:border-r">
+    <div className="flex h-full flex-col">
       <header className="px-5 pb-3 pt-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-sea/70">
           conversation
@@ -54,6 +54,6 @@ export function ConversationRail({
           ) : null}
         </div>
       </ScrollArea>
-    </aside>
+    </div>
   );
 }
