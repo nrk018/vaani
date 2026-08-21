@@ -39,8 +39,10 @@ async def tts_stream(text: str) -> StreamingResponse:
                     "text": text,
                     "model_id": settings.elevenlabs_tts_model,
                     "voice_settings": {
-                        "stability": 0.45,
-                        "similarity_boost": 0.75,
+                        "stability": 0.48,
+                        "similarity_boost": 0.8,
+                        "style": 0.25,
+                        "speed": 0.96,
                     },
                 },
             ) as res:

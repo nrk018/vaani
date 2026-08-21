@@ -6,11 +6,11 @@ import { useEffect, useId, useRef, useState } from "react";
 import type { OrbState } from "@/lib/types";
 
 const COLORS = [
-  "#FFB3D9",
-  "#87CEEB",
-  "#4A90E2",
-  "#2C3E50",
-  "#1A1A2E",
+  "#FEE101",
+  "#FFFBE8",
+  "#0B6839",
+  "#127A44",
+  "#063D22",
 ];
 
 const MOTION: Record<
@@ -83,7 +83,7 @@ export function MeshGradientSVG({
 
         <foreignObject width="231" height="289" clipPath={`url(#${clipId})`}>
           <div
-            xmlns="http://www.w3.org/1999/xhtml"
+            {...{ xmlns: "http://www.w3.org/1999/xhtml" }}
             style={{ width: "100%", height: "100%" }}
           >
             <MeshGradient
@@ -101,7 +101,7 @@ export function MeshGradientSVG({
           cy={120}
           rx={20}
           ry={30}
-          fill="#1A1A2E"
+          fill="#063D22"
           initial={false}
           animate={{
             cx: 80 + eyeOffset.x,
@@ -124,7 +124,7 @@ export function MeshGradientSVG({
           cy={120}
           rx={20}
           ry={30}
-          fill="#1A1A2E"
+          fill="#063D22"
           initial={false}
           animate={{
             cx: 150 + eyeOffset.x,

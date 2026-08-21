@@ -32,7 +32,7 @@ export function Constellation({
           <button
             key={c.id}
             type="button"
-            className="rounded-full border border-gold/35 bg-[#1A1A2E]/80 px-2.5 py-1 text-[10px] tracking-wide text-gold/90 shadow-[0_0_16px_rgba(255,179,217,0.18)] backdrop-blur-sm transition hover:scale-105 hover:border-gold"
+            className="rounded-full border border-gold/45 bg-[#08532e]/80 px-2.5 py-1 text-[10px] tracking-wide text-gold shadow-[0_0_16px_rgba(254,225,1,0.22)] backdrop-blur-sm transition hover:scale-105 hover:border-gold"
             onClick={() => setOpen(c)}
           >
             {c.title.slice(0, 28) || c.strategy}
@@ -41,7 +41,7 @@ export function Constellation({
         ))}
       </div>
       {open ? (
-        <div className="mt-3 rounded-2xl border border-gold/20 bg-[#1A1A2E]/95 p-4 shadow-2xl">
+        <div className="mt-3 rounded-none border border-gold/30 bg-[#08532e]/95 p-4 shadow-[6px_8px_0_rgba(0,0,0,0.25)]">
           <div className="mb-2 flex items-center justify-between gap-3">
             <p className="font-serif text-lg text-gold">{open.title}</p>
             <button

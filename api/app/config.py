@@ -15,7 +15,8 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=(".env", "../.env"), extra="ignore")
 
     elevenlabs_api_key: str = ""
-    elevenlabs_voice_id: str = "JBFqnCBsd6RMkjVDRZzb"
+    # Benne — conversational South Indian male (no Goan/Konkani voice in the library).
+    elevenlabs_voice_id: str = "Cjxf7lo0ZVGyj0CtWa8q"
     elevenlabs_tts_model: str = "eleven_flash_v2_5"
 
     groq_api_key: str = ""

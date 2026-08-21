@@ -19,8 +19,8 @@ export function Nav({ active }: { active: "stage" | "lab" | "about" }) {
   return (
     <header className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-center justify-between px-6 py-5">
       <Link href="/" className="pointer-events-auto flex items-baseline gap-3">
-        <span className="font-serif text-2xl tracking-wide text-white">Vaani</span>
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-sea/80">
+        <span className="font-serif text-2xl uppercase tracking-wide text-sea">Vaani</span>
+        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-gold">
           वाणी
         </span>
       </Link>

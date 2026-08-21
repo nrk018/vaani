@@ -41,7 +41,7 @@ export function Waveform({
         return (
           <span
             key={i}
-            className={`rounded-t-full bg-gradient-to-t from-[#4A90E2]/40 to-[#FFB3D9] transition-[height,opacity] duration-150 ${
+            className={`rounded-t-full bg-gradient-to-t from-[#0B6839]/50 to-[#FEE101] transition-[height,opacity] duration-150 ${
               variant === "dock" ? "min-w-0 flex-1" : "w-[3px]"
             } ${active ? "opacity-100" : "opacity-40"}`}
             style={{ height: `${h}px` }}

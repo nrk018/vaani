@@ -92,7 +92,7 @@ export function VoiceStage() {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ type: "spring", stiffness: 380, damping: 36 }}
-            className="fixed inset-y-0 left-0 z-50 flex w-[min(20rem,88vw)] flex-col border-r border-white/10 bg-[#12101c]/95 backdrop-blur-md"
+            className="fixed inset-y-0 left-0 z-50 flex w-[min(20rem,88vw)] flex-col border-r border-gold/20 bg-[#0B6839]/95 backdrop-blur-md"
           >
             <DrawerClose onClick={() => setPanel(null)} />
             <ConversationRail turns={v.turns} partial={v.partial} />
@@ -108,7 +108,7 @@ export function VoiceStage() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 380, damping: 36 }}
-            className="fixed inset-y-0 right-0 z-50 flex w-[min(20rem,88vw)] flex-col border-l border-white/10 bg-[#12101c]/95 backdrop-blur-md"
+            className="fixed inset-y-0 right-0 z-50 flex w-[min(20rem,88vw)] flex-col border-l border-gold/20 bg-[#0B6839]/95 backdrop-blur-md"
           >
             <DrawerClose onClick={() => setPanel(null)} />
             <LatencyHud
@@ -156,11 +156,11 @@ export function VoiceStage() {
               value={v.draft}
               onChange={(e) => v.setDraft(e.target.value)}
               placeholder="Try: What is the capital of Goa?"
-              className="h-11 flex-1 rounded-full border border-gold/20 bg-[#1A1A2E]/80 px-4 text-sm text-white outline-none placeholder:text-white/30 focus:border-sea/60"
+              className="h-11 flex-1 rounded-none border border-gold/40 bg-[#08532e]/80 px-4 text-sm text-sea outline-none placeholder:text-sea/35 focus:border-gold"
             />
             <Button
               type="submit"
-              className="h-11 rounded-full bg-gold px-5 text-[#1A1A2E] hover:bg-gold/90"
+              className="h-11 rounded-none bg-gold px-5 font-serif text-lg uppercase tracking-wide text-ink hover:bg-gold/90"
             >
               Ask
             </Button>
@@ -168,7 +168,7 @@ export function VoiceStage() {
               type="button"
               size="icon"
               variant="ghost"
-              className="h-11 w-11 rounded-full border border-gold/25 text-white hover:bg-gold/10"
+              className="h-11 w-11 rounded-none border border-gold/40 text-gold hover:bg-gold/15"
               onClick={() =>
                 listening ? v.stopListening() : v.startListening()
               }
@@ -223,7 +223,7 @@ function EdgeTab({
       type="button"
       onClick={onClick}
       aria-expanded={open}
-      className={`fixed top-1/2 z-40 flex -translate-y-1/2 items-center gap-2 border border-white/10 bg-[#1A1A2E]/80 px-2 py-3 font-mono text-[9px] uppercase tracking-[0.22em] text-white/70 backdrop-blur-md transition hover:text-gold ${
+      className={`fixed top-1/2 z-40 flex -translate-y-1/2 items-center gap-2 border border-gold/25 bg-[#08532e]/85 px-2 py-3 font-mono text-[9px] uppercase tracking-[0.22em] text-sea/80 backdrop-blur-md transition hover:text-gold ${
         side === "left"
           ? "left-0 rounded-r-xl border-l-0"
           : "right-0 rounded-l-xl border-r-0"

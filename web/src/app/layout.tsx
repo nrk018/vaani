@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Imbue, Victor_Mono } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
+const victor = Victor_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
-const instrument = Instrument_Serif({
+const imbue = Imbue({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -29,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`dark ${geistSans.variable} ${geistMono.variable} ${instrument.variable} h-full antialiased`}
+      className={`dark ${victor.variable} ${imbue.variable} h-full antialiased`}
     >
       <body className="grain min-h-full">
         <TooltipProvider>{children}</TooltipProvider>
